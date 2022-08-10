@@ -1,0 +1,78 @@
+s = serial('COM1','baudrate',38400);
+fopen(s);
+fwrite(s,200);
+
+zipTimeSize=10;
+zipSensorSize=38;
+averageSamples=5;
+
+roll=diag(ones(zipTimeSize-1,1),1);
+roll=sparse(roll);
+
+prev=0;
+current=255;
+
+while ((prev~=255) & (current~=0))
+    prev = current;
+    current=fread(s,1,'uint8');
+end
+fprintf('synchronized\n');
+fread(s,1,'uint8');
+
+monitor=figure(1);
+clf;
+xlabel('wavelength');
+ylabel('intensity');
+set(monitor,'BackingStore','off');
+set(monitor,'DoubleBuffer','on');
+set(monitor,'Renderer','painters');
+currentaxis=gca;
+set(currentaxis,'YLim',[0 255]);
+set(currentaxis,'YLimMode','manual');
+set(currentaxis,'XLim',[1 zipSensorSize]);
+set(currentaxis,'XLimMode','manual');
+grid on
+a=1:zipSensorSize;
+a=a';
+h = line(a,a);
+desired=[85;95;98;100;106;112;128;148;152;139;119;104;98;94;93;93;93;95;97;99;104;102;106;106;110;113;121;131;149;166;172;162;150;120;106;97;93;95];
+line(a,desired,'Color','red');
+
+zip=zeros(zipSensorSize,zipTimeSize);
+
+zipDraw=figure(2);
+clf;
+xlabel('time');
+ylabel('wavelength');
+zlabel('intensity');
+zipAxis=gca;
+set(zipAxis,'ZLim',[0 255]);
+set(zipAxis,'ZLimMode','manual');
+set(zipAxis,'YLim',[1 zipSensorSize]);
+set(zipAxis,'YLimMode','manual');
+set(zipAxis,'CameraPositionMode','manual');
+view(3);
+grid on
+zipHandle=surface(zip);
+colormap('JET');
+
+while (1)
+for n=1:zipTimeSize
+    average=zeros(zipSensorSize,1);
+    for i=1:averageSamples
+        idn = fread(s,38,'uint8');
+        average=average+idn;
+        fread(s,2,'uint8');
+        set(h,'YData',idn);
+        drawnow
+    end
+    average=average./averageSamples;
+    zip=zip*roll;
+    zip(:,1)=average;
+    set(zipHandle,'ZData',zip);
+    set(zipHandle,'CData',zip);
+end
+end
+
+fclose(s);
+fprintf('end\n');

@@ -1,0 +1,1521 @@
+<html>
+
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/disassembly/disass.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:44:16 GMT -->
+<head>
+<title>disassembly board</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000">
+<table width="100%" border="1" cellspacing="0" cellpadding="5" bordercolor="#999999">
+  <tr align="center"> 
+    <td width="4%" valign="top" align="center">line</td>
+    <td width="5%" valign="top">Addr</td>
+    <td width="6%">hex</td>
+    <td width="16%">bin</td>
+    <td width="9%">Vectors</td>
+    <td width="29%">opcode</td>
+    <td width="31%" valign="top">rem</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right"> 
+      <p>0<br>
+        1<br>
+        2<br>
+        3<br>
+        4<br>
+        5<br>
+        6<br>
+        7</p>
+    </td>
+    <td width="5%" valign="top"> 
+      <p>0000</p>
+    </td>
+    <td width="6%">C194<br>
+      C005<br>
+      0000<br>
+      0000<br>
+      C011<br>
+      0000<br>
+      C02C<br>
+      930F</td>
+    <td width="16%">1100000110010100<br>
+      1100000000000101<br>
+      0000000000000000<br>
+      0000000000000000<br>
+      1100000000010001<br>
+      0000000000000000<br>
+      1100000000101100<br>
+      1001001100001111</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      EXT_INT0:</td>
+    <td width="29%" valign="top">rjmp RESET<br>
+      rjmp EXT_INT0<br>
+      nop<br>
+      nop<br>
+      rjmp TIM_COMP1<br>
+      nop<br>
+      rjmp TIM_OVF0<br>
+      push Reg16</td>
+    <td width="31%" valign="top">RESET -&gt; +404 +1<br>
+      EXT_INT0 -&gt; +5+1<br>
+      <br>
+      <br>
+      TIM_COMP1 -&gt; +17 +1<br>
+      <br>
+      TIM_OVF0 -&gt; +44 +1<br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right"> 
+      <p>8<b><br>
+        </b>9<br>
+        10<br>
+        11<br>
+        12<br>
+        13<br>
+        14<br>
+        15</p>
+    </td>
+    <td width="5%" valign="top">0008</td>
+    <td width="6%">B70F<br>
+      930F<br>
+      931F<br>
+      9100<br>
+      006A<br>
+      2300<br>
+      F011<br>
+      D0BE</td>
+    <td width="16%">1011011100001111<br>
+      1001001100001111<br>
+      1001001100011111<br>
+      1001000100000000<br>
+      0000000001101010<br>
+      0010001100000000<br>
+      1111000000010001<br>
+      1101000010111110</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">in Reg16,SREG<br>
+      push Reg16<br>
+      push Reg17<br>
+      lds Reg16,0x006A<br>
+      [...]<br>
+      tst Reg16<br>
+      brbs 1,EXT_END<br>
+      rcall R1</td>
+    <td width="31%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      R1-&gt; +190+1</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">16<br>
+      17<br>
+      18<br>
+      19<br>
+      20<br>
+      21<br>
+      22<br>
+      23</td>
+    <td width="5%" valign="top">0010</td>
+    <td width="6%">D0AD<br>
+      911F<br>
+      910F<br>
+      BF0F<br>
+      910F<br>
+      9518<br>
+      930F<br>
+      B70F</td>
+    <td width="16%">1101000010101101<br>
+      1001000100011111<br>
+      1001000100001111<br>
+      1011111100001111<br>
+      1001000100001111<br>
+      1001010100011000<br>
+      1001001100001111<br>
+      1011011100001111</td>
+    <td width="9%" valign="top"><br>
+      EXT_END<br>
+      <br>
+      <br>
+      <br>
+      <br>
+      TIM_COMP1:<br>
+    </td>
+    <td width="29%" valign="top"> rcall R2<br>
+      pop Reg17<br>
+      pop Reg16<br>
+      out SREG,Reg16<br>
+      pop Reg16<br>
+      reti<br>
+      push Reg16<br>
+      in Reg16,SREG</td>
+    <td width="31%" valign="top">R2-&gt; +173+1</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">24<br>
+      25<br>
+      26<br>
+      27<br>
+      28<br>
+      29<br>
+      30<br>
+      31</td>
+    <td width="5%" valign="top">0018</td>
+    <td width="6%">930F<br>
+      931F<br>
+      36A2<br>
+      F099<br>
+      36A4<br>
+      F099<br>
+      9891<br>
+      0000</td>
+    <td width="16%">1001001100001111<br>
+      1001001100011111<br>
+      0011011010100010<br>
+      1111000010011001<br>
+      0011011010100100<br>
+      1111000010011001<br>
+      1001100010010001<br>
+      0000000000000000</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">push Reg16<br>
+      push Reg17<br>
+      cpi Reg26,0x62<br>
+      brbs 1,B1<br>
+      cpi Reg26,0x64<br>
+      brbs 1,B2<br>
+      cbi PORTD,PD1<br>
+      nop </td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">32<br>
+      33<br>
+      34<br>
+      35<br>
+      36<br>
+      37<br>
+      38<br>
+      39</td>
+    <td width="5%" valign="top">0020</td>
+    <td width="6%">E6A0<br>
+      E002<br>
+      BF09<br>
+      910D<br>
+      BD0B<br>
+      910D<br>
+      BD0A<br>
+      E400</td>
+    <td width="16%">1110011010100000<br>
+      1110000000000010<br>
+      1011111100001001<br>
+      1001000100001101<br>
+      1011110100001011<br>
+      1001000100001101<br>
+      1011110100001010<br>
+      1110010000000000</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      S1:<br>
+      <br>
+      <br>
+      <br>
+    </td>
+    <td width="29%" valign="top">ldi Reg26,0x60<br>
+      ldi Reg16, 0x02<br>
+      out TIMSK,Reg16<br>
+      ld Reg16, X+<br>
+      out OCR1AH,Reg16<br>
+      ld Reg16, X+<br>
+      out OCR1AL,Reg16<br>
+      ldi Reg16, 0x40</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">40<br>
+      41<br>
+      42<br>
+      43<br>
+      44<br>
+      45<br>
+      46<br>
+      47</td>
+    <td width="5%" valign="top">0028</td>
+    <td width="6%">9300<br>
+      0058<br>
+      911F<br>
+      910F<br>
+      BF0F<br>
+      910F<br>
+      9518<br>
+      9A91</td>
+    <td width="16%">1001001100000000<br>
+      0000000001011000<br>
+      1001000100011111<br>
+      1001000100001111<br>
+      1011111100001111<br>
+      1001000100001111<br>
+      1001010100011000<br>
+      1001101010010001 </td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      B1: </td>
+    <td width="29%" valign="top">sts 0x0058,Reg16<br>
+      [...]<br>
+      pop Reg17<br>
+      pop Reg16<br>
+      out SREG,Reg16<br>
+      pop Reg16<br>
+      reti<br>
+      sbi PORTD,PD1</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">48<br>
+      49<br>
+      50<br>
+      51<br>
+      52<br>
+      53<br>
+      54<br>
+      55</td>
+    <td width="5%" valign="top">0030</td>
+    <td width="6%">CFF2<br>
+      9890<br>
+      CFF0<br>
+      930F<br>
+      B70F<br>
+      930F<br>
+      E803<br>
+      BF02</td>
+    <td width="16%">1100111111110010<br>
+      1001100010010000<br>
+      1100111111110000<br>
+      1001001100001111<br>
+      1011011100001111<br>
+      1001001100001111<br>
+      1110100000000011<br>
+      1011111100000010</td>
+    <td width="9%" valign="top"><br>
+      B2:<br>
+      <br>
+      TIM_OVF0:<br>
+      <br>
+      <br>
+      <br>
+    </td>
+    <td width="29%" valign="top"> 
+      <p>rjmp S1<br>
+        cbi PORTD,PD0<br>
+        rjmp S1<br>
+        push Reg16<br>
+        in Reg16,SREG<br>
+        push Reg16<br>
+        ldi Reg16,0x83<br>
+        out TCNT0,Reg16</p>
+    </td>
+    <td width="31%" valign="top">S2 -&gt; -14 +1<br>
+      <br>
+      S1 -&gt; -16 +1<br>
+      <br>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">56<br>
+      57<br>
+      58<br>
+      59<br>
+      60<br>
+      61<br>
+      62<br>
+      63</td>
+    <td width="5%" valign="top">0038</td>
+    <td width="6%">931F<br>
+      9986<br>
+      C02C<br>
+      9985<br>
+      C039<br>
+      9984<br>
+      C01B<br>
+      9983</td>
+    <td width="16%">1001001100011111<br>
+      1001100110000110<br>
+      1100000000101100<br>
+      1001100110000101<br>
+      1100000000111001<br>
+      1001100110000100<br>
+      1100000000011011<br>
+      1001100110000011</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">push Reg17<br>
+      sbic PIND,PIND6<br>
+      rjmp S2<br>
+      sbic PIND,PIND5<br>
+      rjmp S3<br>
+      sbic PIND,PIND4<br>
+      rjmp S4<br>
+      sbic PIND,PIND3</td>
+    <td width="31%" valign="top"><br>
+      <br>
+      S2-&gt; +44 +1<br>
+      <br>
+      S3-&gt; +57 +1<br>
+      <br>
+      S4-&gt; +27+1<br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">64<br>
+      65<br>
+      66<br>
+      67<br>
+      68<br>
+      69<br>
+      70<br>
+      71</td>
+    <td width="5%" valign="top">0040</td>
+    <td width="6%">C01F<br>
+      EFEF<br>
+      EFFF<br>
+      3FFF<br>
+      F011<br>
+      D0D0<br>
+      D0ED<br>
+      955A</td>
+    <td width="16%">1100000000011111<br>
+      1110111111101111<br>
+      1110111111111111<br>
+      0011111111111111<br>
+      1111000000010001<br>
+      1101000011010000<br>
+      1101000011101101<br>
+      1001010101011010</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      S7:<br>
+      <br>
+      <br>
+      <br>
+      B3: </td>
+    <td width="29%" valign="top">rjmp S5<br>
+      ldi Reg30,0xFF (??)<br>
+      ldi Reg31,0xFF (??)<br>
+      cpi Reg31,0xFF (??)<br>
+      brbs 1,B3<br>
+      rcall R3<br>
+      rcall R4<br>
+      dec Reg21</td>
+    <td width="31%" valign="top">S5-&gt; +31+1<br>
+      <br>
+      <br>
+      <br>
+      <br>
+      R3-&gt; +208+1<br>
+      R4-&gt; +237 +1<br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">72<br>
+      73<br>
+      74<br>
+      75<br>
+      76<br>
+      77<br>
+      78<br>
+      79</td>
+    <td width="5%" valign="top">0048</td>
+    <td width="6%">F461<br>
+      956A<br>
+      F452<br>
+      9160<br>
+      0068<br>
+      9150<br>
+      0069<br>
+      9100</td>
+    <td width="16%">1111010001100001<br>
+      1001010101101010<br>
+      1111010001010010<br>
+      1001000101100000<br>
+      0000000001101000<br>
+      1001000101010000<br>
+      0000000001101001<br>
+      1001000100000000</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">brbc 1,TIM_END<br>
+      dec Reg22<br>
+      brbc 2,TIM_END<br>
+      lds Reg22,0x0068<br>
+      [...]<br>
+      lds Reg21,0x0069<br>
+      [...]<br>
+      lds Reg16,0x006A</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">80<br>
+      81<br>
+      82<br>
+      83<br>
+      84<br>
+      85<br>
+      86<br>
+      87</td>
+    <td width="5%" valign="top">0050</td>
+    <td width="6%">006A<br>
+      2300<br>
+      F411<br>
+      D07A<br>
+      D069<br>
+      911F<br>
+      910F<br>
+      BF0F</td>
+    <td width="16%">0000000001101010<br>
+      0010001100000000<br>
+      1111010000010001<br>
+      1101000001111010<br>
+      1101000001101001<br>
+      1001000100011111<br>
+      1001000100001111<br>
+      1011111100001111</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      TIM_END:<br>
+    </td>
+    <td width="29%" valign="top"> 
+      <p>[...]<br>
+        tst Reg16<br>
+        brbc 1,TIM_END<br>
+        rcall R1<br>
+        rcall R2<br>
+        pop Reg17<br>
+        pop Reg16<br>
+        out SREG,Reg16</p>
+    </td>
+    <td width="31%" valign="top"> 
+      <p><br>
+        <br>
+        <br>
+        R1-&gt; +122+1<br>
+        R2-&gt; +105+1<br>
+        <br>
+        <br>
+      </p>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">88<br>
+      89<br>
+      90<br>
+      91<br>
+      92<br>
+      93<br>
+      94<br>
+      95</td>
+    <td width="5%" valign="top">0058</td>
+    <td width="6%">910F<br>
+      9518<br>
+      9631<br>
+      F4C9<br>
+      957A<br>
+      F4BA<br>
+      2777<br>
+      C015</td>
+    <td width="16%">1001000100001111<br>
+      1001010100011000<br>
+      1001011000110001<br>
+      1111010011001001<br>
+      1001010101111010<br>
+      1111010010111010<br>
+      0010011101110111<br>
+      1100000000010101</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      S4:<br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </td>
+    <td width="29%" valign="top">pop Reg16<br>
+      reti<br>
+      adiw ZL,0x01<br>
+      brbc 1,S6<br>
+      dec Reg23<br>
+      brbc 2,S6<br>
+      clr Reg23<br>
+      rjmp S6</td>
+    <td width="31%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      S6-&gt; +21+1</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right"> 
+      <p>96<br>
+        97<br>
+        98<br>
+        99<br>
+        100<br>
+        101<br>
+        102<br>
+        103</p>
+    </td>
+    <td width="5%" valign="top">0060</td>
+    <td width="6%">9631<br>
+      F499<br>
+      9573<br>
+      3073<br>
+      F481<br>
+      E072<br>
+      C00E<br>
+      9631</td>
+    <td width="16%">1001011000110001<br>
+      1111010010011001<br>
+      1001010101110011<br>
+      0011000001110011<br>
+      1111010010000001<br>
+      1110000001110010<br>
+      1100000000001110<br>
+      1001011000110001</td>
+    <td width="9%" valign="top">S5:<br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      S2: </td>
+    <td width="29%" valign="top">adiw ZL,0x01<br>
+      brbc 1,S6<br>
+      inc Reg23<br>
+      cpi Reg23,0x03<br>
+      brbc 1,S6<br>
+      ldi Reg23,0x02<br>
+      rjmp S6<br>
+      adiw ZL,0x01 </td>
+    <td width="31%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      S6-&gt; +14+1<br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">104<br>
+      105<br>
+      106<br>
+      107<br>
+      108<br>
+      109<br>
+      110<br>
+      111</td>
+    <td width="5%" valign="top">0068</td>
+    <td width="6%">F029<br>
+      30F2<br>
+      F050<br>
+      2F0E<br>
+      710F<br>
+      F439<br>
+      3070<br>
+      F0A1</td>
+    <td width="16%">1111000000101001<br>
+      0011000011110010<br>
+      1111000001010000<br>
+      0010111100001110<br>
+      0111000100001111<br>
+      1111010000111001<br>
+      0011000001110000<br>
+      1111000010100001</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      B4:<br>
+    </td>
+    <td width="29%" valign="top">brbs 1,B4<br>
+      cpi Reg31,0x02<br>
+      brbs 0,S6<br>
+      mov Reg16,Reg30<br>
+      andi Reg16,0x1F<br>
+      brbc 1,S6<br>
+      cpi Reg23,0x00<br>
+      brbs 1,B5</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">112<br>
+      113<br>
+      114<br>
+      115<br>
+      116<br>
+      117<br>
+      118<br>
+      119</td>
+    <td width="5%" valign="top">0070</td>
+    <td width="6%">3071<br>
+      F0F1<br>
+      3072<br>
+      F141<br>
+      C000<br>
+      CFCD<br>
+      9631<br>
+      F029</td>
+    <td width="16%">0011000001110001<br>
+      1111000011110001<br>
+      0011000001110010<br>
+      1111000101000001<br>
+      1100000000000000<br>
+      1100111111001101<br>
+      1001011000110001<br>
+      1111000000101001</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      S6:<br>
+      S3:<br>
+    </td>
+    <td width="29%" valign="top">cpi Reg23,0x01<br>
+      brbs 1,B6<br>
+      cpi Reg23,0x02<br>
+      brbs 1,B7<br>
+      rjmp here = nop (???????????)<br>
+      rjmp S7<br>
+      adiw ZL,0x01<br>
+      brbs 1,B8</td>
+    <td width="31%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      S7-&gt; -51+1<br>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">120<br>
+      121<br>
+      122<br>
+      123<br>
+      124<br>
+      125<br>
+      126<br>
+      127</td>
+    <td width="5%" valign="top">0078</td>
+    <td width="6%">30F2<br>
+      F3D8<br>
+      2F0E<br>
+      710F<br>
+      F7C1<br>
+      3070<br>
+      F109<br>
+      3071</td>
+    <td width="16%">0011000011110010<br>
+      1111001111011000<br>
+      0010111100001110<br>
+      0111000100001111<br>
+      1111011111000001<br>
+      0011000001110000<br>
+      1111000100001001<br>
+      0011000001110001</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      B8:<br>
+      <br>
+    </td>
+    <td width="29%" valign="top">cpi Reg31,0x02<br>
+      brbs 0,S6<br>
+      mov Reg16,Reg30<br>
+      andi Reg16,0x1F<br>
+      brbc 1,S6<br>
+      cpi Reg23,0x00<br>
+      brbs 1,B9<br>
+      cpi Reg23,0x01</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">128<br>
+      129<br>
+      130<br>
+      131<br>
+      132<br>
+      133<br>
+      134<br>
+      135</td>
+    <td width="5%" valign="top">0080</td>
+    <td width="6%">F161<br>
+      3072<br>
+      F1B9<br>
+      CFF1<br>
+      9100<br>
+      0067<br>
+      9503<br>
+      9300</td>
+    <td width="16%">1111000101100001<br>
+      0011000001110010<br>
+      1111000110111001<br>
+      1100111111110001<br>
+      1001000100000000<br>
+      0000000001100111<br>
+      1001010100000011<br>
+      1001001100000000<br>
+    </td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      B5:<br>
+      <br>
+      <br>
+    </td>
+    <td width="29%" valign="top">brbs 1,B10<br>
+      cpi Reg23,0x02<br>
+      brbs 1,B11<br>
+      rjmp S6 <br>
+      lds Reg16,0x0067<br>
+      [...]<br>
+      inc Reg16<br>
+      sts 0x0067,Reg16</td>
+    <td width="31%" valign="top"><br>
+      <br>
+      <br>
+      S6-&gt; -15 + 1<br>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">136<br>
+      137<br>
+      138<br>
+      139<br>
+      140<br>
+      141<br>
+      142<br>
+      143</td>
+    <td width="5%" valign="top">0088</td>
+    <td width="6%">0067<br>
+      F759<br>
+      9100<br>
+      0066<br>
+      9503<br>
+      9300<br>
+      0066<br>
+      CFE5</td>
+    <td width="16%">0000000001100111<br>
+      1111011101011001<br>
+      1001000100000000<br>
+      0000000001100110<br>
+      1001010100000011<br>
+      1001001100000000<br>
+      0000000001100110<br>
+      1100111111100101</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      B9: </td>
+    <td width="29%" valign="top">[...]<br>
+      brbc 1,S6<br>
+      lds Reg16,0x0066<br>
+      [...]<br>
+      inc Reg16<br>
+      sts 0x0066,Reg16<br>
+      [...]<br>
+      rjmp S6</td>
+    <td width="31%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      S6-&gt; -27 + 1 </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">144<br>
+      145<br>
+      146<br>
+      147<br>
+      148<br>
+      149<br>
+      150<br>
+      151</td>
+    <td width="5%" valign="top">0090</td>
+    <td width="6%">9100<br>
+      0069<br>
+      9503<br>
+      9300<br>
+      0069<br>
+      F6F9<br>
+      9100<br>
+      0068</td>
+    <td width="16%">1001000100000000<br>
+      0000000001101001<br>
+      1001010100000011<br>
+      1001001100000000<br>
+      0000000001101001<br>
+      1111011011111001<br>
+      1001000100000000<br>
+      0000000001101000</td>
+    <td width="9%" valign="top">B6:</td>
+    <td width="29%" valign="top">lds Reg16,0x0069<br>
+      [...] <br>
+      inc Reg16<br>
+      sts 0x0069,Reg16<br>
+      [...]<br>
+      brbc 1,S6<br>
+      lds Reg16,0x0068<br>
+      [...] </td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">152<br>
+      153<br>
+      154<br>
+      155<br>
+      156<br>
+      157<br>
+      158<br>
+      159</td>
+    <td width="5%" valign="top">0098</td>
+    <td width="6%">9503<br>
+      9300<br>
+      0068<br>
+      CFD9<br>
+      E001<br>
+      9300<br>
+      006A<br>
+      CFD5</td>
+    <td width="16%">1001010100000011<br>
+      1001001100000000<br>
+      0000000001101000<br>
+      1100111111011001<br>
+      1110000000000001<br>
+      1001001100000000<br>
+      0000000001101010<br>
+      1100111111010101</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      B7:<br>
+      <br>
+      <br>
+      <br>
+    </td>
+    <td width="29%" valign="top">inc Reg16<br>
+      sts 0x0068,Reg16<br>
+      [...]<br>
+      rjmp S6<br>
+      ldi Reg16,0x01<br>
+      sts 0x006A,Reg16<br>
+      [...]<br>
+      rjmp S6 </td>
+    <td width="31%" valign="top"><br>
+      <br>
+      <br>
+      S6-&gt; -39+1<br>
+      <br>
+      <br>
+      <br>
+      S6-&gt; -43 +1</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">160<br>
+      161<br>
+      162<br>
+      163<br>
+      164<br>
+      165<br>
+      166<br>
+      167</td>
+    <td width="5%" valign="top">00A0</td>
+    <td width="6%">9100<br>
+      0067<br>
+      950A<br>
+      9300<br>
+      0067<br>
+      3F0F<br>
+      F671<br>
+      9100</td>
+    <td width="16%">1001000100000000<br>
+      0000000001100111<br>
+      1001010100001010<br>
+      1001001100000000<br>
+      0000000001100111<br>
+      0011111100001111<br>
+      1111011001110001<br>
+      1001000100000000</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">lds Reg16,0x0067<br>
+      [...]<br>
+      dec Reg16<br>
+      sts 0x006A,Reg16<br>
+      [...]<br>
+      cpi Reg16,0xFF (??)<br>
+      brbc 1,S6<br>
+      lds Reg16,0x0066</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">168<br>
+      169<br>
+      170<br>
+      171<br>
+      172<br>
+      173<br>
+      174<br>
+      175</td>
+    <td width="5%" valign="top">00A8</td>
+    <td width="6%">0066<br>
+      950A<br>
+      9300<br>
+      0066<br>
+      CFC8<br>
+      9100<br>
+      0069<br>
+      950A</td>
+    <td width="16%">0000000001100110<br>
+      1001010100001010<br>
+      1001001100000000<br>
+      0000000001100110<br>
+      1100111111001000<br>
+      1001000100000000<br>
+      0000000001101001<br>
+      1001010100001010</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      B10:<br>
+      <br>
+    </td>
+    <td width="29%" valign="top">[...]<br>
+      dec Reg16<br>
+      sts 0x0066,Reg16<br>
+      [...]<br>
+      rjmp S6<br>
+      lds Reg16,0x0069<br>
+      [...]<br>
+      dec Reg16</td>
+    <td width="31%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      S6-&gt; -56+1<br>
+      <br>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">176<br>
+      177<br>
+      178<br>
+      179<br>
+      180<br>
+      181<br>
+      182<br>
+      183</td>
+    <td width="5%" valign="top">00B0</td>
+    <td width="6%">9300<br>
+      0069<br>
+      3F0F<br>
+      F609<br>
+      9100<br>
+      0068<br>
+      950A<br>
+      9300</td>
+    <td width="16%">1001001100000000<br>
+      0000000001101001<br>
+      0011111100001111<br>
+      1111011000001001<br>
+      1001000100000000<br>
+      0000000001101000<br>
+      1001010100001010<br>
+      1001001100000000</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">sts 0x0069,Reg16<br>
+      [...]<br>
+      cpi Reg16,0xFF (??)<br>
+      brbc 1,S6<br>
+      lds Reg16,0x0068<br>
+      [...]<br>
+      dec Reg16<br>
+      sts 0x0068,Reg16</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">184<br>
+      185<br>
+      186<br>
+      187<br>
+      188<br>
+      189<br>
+      190<br>
+      191</td>
+    <td width="5%" valign="top">00B8</td>
+    <td width="6%">0068<br>
+      CFBB<br>
+      2700<br>
+      9300<br>
+      006A<br>
+      CFB7<br>
+      E6A0<br>
+      27BB</td>
+    <td width="16%">0000000001101000<br>
+      1100111110111011<br>
+      0010011100000000<br>
+      1001001100000000<br>
+      0000000001101010<br>
+      1100111110110111<br>
+      1110011010100000<br>
+      0010011110111011</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      B11:<br>
+      <br>
+      <br>
+      <br>
+      R2:<br>
+    </td>
+    <td width="29%" valign="top">[...]<br>
+      rjmp S6<br>
+      clr Reg16<br>
+      sts 0x006A,Reg16<br>
+      [...]<br>
+      rjmp S6<br>
+      ldi Reg26,0x60<br>
+      clr Reg27</td>
+    <td width="31%" valign="top"><br>
+      S6-&gt; -69 +1 <br>
+      <br>
+      <br>
+      <br>
+      S6-&gt; -73 +1 <br>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">192<br>
+      193<br>
+      194<br>
+      195<br>
+      196<br>
+      197<br>
+      198<br>
+      199</td>
+    <td width="5%" valign="top">00C0</td>
+    <td width="6%">910D<br>
+      BD0B<br>
+      910D<br>
+      BD0A<br>
+      2700<br>
+      BD0D<br>
+      BD0C<br>
+      9A90</td>
+    <td width="16%">1001000100001101<br>
+      1011110100001011<br>
+      1001000100001101<br>
+      1011110100001010<br>
+      0010011100000000<br>
+      1011110100001101<br>
+      1011110100001100<br>
+      1001101010010000</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">ld Reg16, X+<br>
+      out OCR1AH,Reg16<br>
+      ld Reg16, X+<br>
+      out OCR1AL,Reg16<br>
+      clr Reg16<br>
+      out TCNT1H,Reg16<br>
+      out TCNT1L,Reg16<br>
+      sbi PORTD,PD0</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">200<br>
+      201<br>
+      202<br>
+      203<br>
+      204<br>
+      205<br>
+      206<br>
+      207</td>
+    <td width="5%" valign="top">00C8</td>
+    <td width="6%">E400<br>
+      9300<br>
+      0058<br>
+      E402<br>
+      BF09<br>
+      9508<br>
+      9110<br>
+      0066</td>
+    <td width="16%">1110010000000000<br>
+      1001001100000000<br>
+      0000000001011000<br>
+      1110010000000010<br>
+      1011111100001001<br>
+      1001010100001000<br>
+      1001000100010000<br>
+      0000000001100110</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      R1:<br>
+    </td>
+    <td width="29%" valign="top">ldi Reg16,0x40<br>
+      sts 0x0058,Reg16<br>
+      [...]<br>
+      ldi Reg16,0x42<br>
+      out TIMSK,Reg16<br>
+      ret<br>
+      lds Reg17,0x0066<br>
+      [...] </td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">208<br>
+      209<br>
+      210<br>
+      211<br>
+      212<br>
+      213<br>
+      214<br>
+      215</td>
+    <td width="5%" valign="top">00D0</td>
+    <td width="6%">9100<br>
+      0067<br>
+      9488<br>
+      1F00<br>
+      1F11<br>
+      1F00<br>
+      1F11<br>
+      1F00</td>
+    <td width="16%">1001000100000000<br>
+      0000000001100111<br>
+      1001010010001000<br>
+      0001111100000000<br>
+      0001111100010001<br>
+      0001111100000000<br>
+      0001111100010001<br>
+      0001111100000000</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">lds Reg16,0x0067<br>
+      [...]<br>
+      clc<br>
+      rol Reg16<br>
+      rol Reg17<br>
+      rol Reg16<br>
+      rol Reg17<br>
+      rol Reg16</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">216<br>
+      217<br>
+      218<br>
+      219<br>
+      220<br>
+      221<br>
+      222<br>
+      223</td>
+    <td width="5%" valign="top">00D8</td>
+    <td width="6%">1F11<br>
+      500B<br>
+      4010<br>
+      9310<br>
+      0060<br>
+      9300<br>
+      0061<br>
+      9310</td>
+    <td width="16%">0001111100010001<br>
+      0101000000001011<br>
+      0100000000010000<br>
+      1001001100010000<br>
+      0000000001100000<br>
+      1001001100000000<br>
+      0000000001100001<br>
+      1001001100010000</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">rol Reg17<br>
+      subi Reg16,0x0B<br>
+      sbci Reg17,0x00<br>
+      sts 0x0060,Reg17<br>
+      [...]<br>
+      sts 0x0061,Reg16<br>
+      [...]<br>
+      sts 0x0064,Reg17</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">224<br>
+      225<br>
+      226<br>
+      227<br>
+      228<br>
+      229<br>
+      230<br>
+      231</td>
+    <td width="5%" valign="top">00E0</td>
+    <td width="6%">0064<br>
+      9300<br>
+      0065<br>
+      5304<br>
+      411F<br>
+      9500<br>
+      9510<br>
+      9310</td>
+    <td width="16%">0000000001100100<br>
+      1001001100000000<br>
+      0000000001100101<br>
+      0101001100000100<br>
+      0100000100011111<br>
+      1001010100000000<br>
+      1001010100010000<br>
+      1001001100010000</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">[...]<br>
+      sts 0x0065,Reg16<br>
+      [...]<br>
+      subi Reg16,0x34<br>
+      sbci Reg17,0x1F<br>
+      com Reg16<br>
+      com Reg17<br>
+      sts 0x0062,Reg17</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">232<br>
+      233<br>
+      234<br>
+      235<br>
+      236<br>
+      237<br>
+      238<br>
+      239</td>
+    <td width="5%" valign="top">00E8</td>
+    <td width="6%">0062<br>
+      9300<br>
+      0063<br>
+      9508<br>
+      27CC<br>
+      E1D0<br>
+      EF4F<br>
+      2E2D</td>
+    <td width="16%">0000000001100010<br>
+      1001001100000000<br>
+      0000000001100011<br>
+      1001010100001000<br>
+      0010011111001100<br>
+      1110000111010000<br>
+      1110111101001111<br>
+      0010111000101101</td>
+    <td width="9%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      R5: <br>
+      <br>
+      <br>
+    </td>
+    <td width="29%" valign="top">[...]<br>
+      sts 0x0063,Reg16<br>
+      [...]<br>
+      ret<br>
+      clr Reg28<br>
+      ldi Reg29,0x10<br>
+      ldi Reg18,0xFF<br>
+      mov Reg02,Reg29</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">240<br>
+      241<br>
+      242<br>
+      243<br>
+      244<br>
+      245<br>
+      246<br>
+      247</td>
+    <td width="5%" valign="top">00F0</td>
+    <td width="6%">27DD<br>
+      9488<br>
+      1C00<br>
+      1C11<br>
+      1FCC<br>
+      972A<br>
+      F028<br>
+      1F44</td>
+    <td width="16%">0010011111011101<br>
+      1001010010001000<br>
+      0001110000000000<br>
+      0001110000010001<br>
+      0001111111001100<br>
+      1001011100101010<br>
+      1111000000101000<br>
+      0001111101000100</td>
+    <td width="9%" valign="top"><br>
+      B112:<br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </td>
+    <td width="29%" valign="top">clr Reg29<br>
+      clc<br>
+      rol Reg00 (??)<br>
+      rol Reg01 (??)<br>
+      rol Reg28<br>
+      sbiw YL,0x0A<br>
+      brbs 0,B12<br>
+      rol Reg20</td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">248<br>
+      249<br>
+      250<br>
+      251<br>
+      252<br>
+      253<br>
+      254<br>
+      255</td>
+    <td width="5%" valign="top">00F8</td>
+    <td width="6%">942A<br>
+      F7B9<br>
+      9540<br>
+      9508<br>
+      1F44<br>
+      962A<br>
+      CFF9<br>
+      3070</td>
+    <td width="16%">1001010000101010<br>
+      1111011110111001<br>
+      1001010101000000<br>
+      1001010100001000<br>
+      0001111101000100<br>
+      1001011000101010<br>
+      1100111111111001<br>
+      0011000001110000</td>
+    <td width="9%" valign="top">S8:<br>
+      <br>
+      <br>
+      <br>
+      B12:<br>
+      <br>
+      <br>
+      R6: </td>
+    <td width="29%" valign="top"> dec Reg02<br>
+      brbc 1,B112<br>
+      com Reg20<br>
+      ret<br>
+      rol Reg20<br>
+      adiw YL,0x02<br>
+      rjmp S8<br>
+      cpi Reg23,0x00</td>
+    <td width="31%" valign="top"><br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      S8-&gt; -7+1<br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">256<br>
+      257<br>
+      258<br>
+      259<br>
+      260<br>
+      261<br>
+      262<br>
+      263</td>
+    <td width="5%" valign="top">0100</td>
+    <td width="6%">F039<br>
+      3071<br>
+      F051<br>
+      3072<br>
+      F069<br>
+      2411<br>
+      2400<br>
+      9508</td>
+    <td width="16%">1111000000111001<br>
+      0011000001110001<br>
+      1111000001010001<br>
+      0011000001110010<br>
+      1111000001101001<br>
+      0010010000010001<br>
+      0010010000000000<br>
+      1001010100001000</td>
+    <td width="9%" valign="top">&nbsp;</td>
+    <td width="29%" valign="top">brbs 1,B13<br>
+      cpi Reg23,0x01<br>
+      brbs 1,B13<br>
+      cpi Reg23,0x02<br>
+      brbs 1,B14<br>
+      clr Reg01<br>
+      clr Reg00<br>
+      ret </td>
+    <td width="31%" valign="top">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="4%" valign="top" align="right">264<br>
+      265<br>
+      266<br>
+      267<br>
+      268<br>
+      269<br>
+      270<br>
+      271</td>
+    <td width="5%" valign="top">0108</td>
+    <td width="6%">9000<br>
+      0067<br>
+      9010<br>
+      0066<br>
+      9508<br>
+      901

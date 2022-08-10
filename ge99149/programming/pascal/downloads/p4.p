@@ -1,0 +1,33 @@
+Program Prosthesi_Klasmatos (input,output);
+Var Ar1 , Ar2, Ar3 , Par1 ,Par2 , Par3 : integer; Choise :char;
+begin;
+repeat
+begin; Writeln ('8a pros8esw 2 klasmata.'); writeln;
+Write ('Dwse mou ton ari8mith tou prwtou : ');
+Read(Ar1); Readln;
+repeat begin;
+Write ('Dwse mou ton paronomasth tou prwtou : ');
+Read(Par1); Readln;
+if (Par1=0) then writeln ('O paronomasths den prepei na einai 0');
+end;
+until (Par1<>0);
+Write ('Dwse mou ton ari8mith tou deuterou : ');
+Read(Ar2); Readln;
+repeat begin;
+Write ('Dwse mou ton paronom. tou deuterou : ');
+Read(Par2); Readln;
+if (Par2=0) then writeln ('O paronomasths den prepei na einai 0');
+end;
+until (Par2<>0);
+Ar3:=Par1*Ar2+Par2*Ar1;
+Par3:=Par1*Par2;
+writeln(Ar1:2 ,'     ', Ar2:3,'      ', Ar3:3 );
+writeln('---  +  ---  =  ----');
+writeln(Par1:2,'     ',Par2:3,'      ',Par3:3 );
+write('8elete na epanalabete thn diadikasia (Y/N)? ');
+read(Choise); readln;
+writeln;
+end;
+until ((Choise<>'Y') and (Choise<>'y'));
+writeln('Fxaristw !');
+end.

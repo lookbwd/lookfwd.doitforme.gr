@@ -1,0 +1,222 @@
+<html><!-- #BeginTemplate "/Templates/maintemplate.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/spectrograph/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:41:06 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Spectrograph</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "meta tags" -->
+<meta name="description" content="Το site για το τεμφε τον προγραμματισμό, τα ηλεκτρονικά, την μουσική και το internet από τον Δημήτρη Κουζή - Λουκά (The TEMFE, programming, electronics, music and internet site by Dimitris Kousis - Loukas)">
+<!-- #EndEditable -->
+<meta name="keywords" content="temfe τεμφε semfe - σεμφε electronics ηλεκτρονικά programming flash c  pascal music drum n bass hardware assembly ασκηση εργαστηριο">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<SCRIPT LANGUAGE="javascript" src="../../scripts.js"></script>
+<link rel="stylesheet" href="../../mystyles.css" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000" background="../../rootfiles/marble.jpg" leftmargin="0" marginwidth="0" marginheight="0" topmargin="25">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="176" height="1"><img src="../../rootfiles/spacer.gif" width="176" height="1" border="0"></td>
+    <td width="313" height="1"><img src="../../rootfiles/spacer.gif" width="313" height="1" border="0"></td>
+    <td width="233" height="1"><img src="../../rootfiles/spacer.gif" width="233" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+  </tr>
+  <tr> 
+    <td  height="24" colspan="3"><img src="../../rootfiles/templateUp185.gif" width="185" height="24"></td>
+    <td height="24" background="../../rootfiles/templateUpMiddle.gif"></td>
+    <td height="24" colspan="3"><img src="../../rootfiles/templateUp242.gif" width="242" height="24"></td>
+  </tr>
+  <tr> 
+    <td height="5" background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td height="5" background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td colspan="3" bgcolor="#FFFFFF"> <!-- #BeginEditable "contains" --> 
+      <SCRIPT language="">
+UpdateTitlebar("<a href=\"electronics/index.htm\" target=\"mainFrame\"><img src=\"bar/electronics.gif\" border=0></a><a href=\"electronics/spectrograph/index.htm\" target=\"mainFrame\"><img src=\"bar/spectrograph.gif\" border=0></a>","<font face='Verdana, Arial, Helvetica, sans-serif'>Spectrograph</font>")
+</script>
+      <table width="720" border="0" cellspacing="0" cellpadding="5">
+        <tr> 
+          <td valign="top" height="54" class="Title"> Spectrograph</td>
+        </tr>
+        <tr> 
+          <td valign="top" class="My_Text"> <p><img src="../images/prototype.gif" width="200" height="129" align="left">Το 
+              κύκλωμα αυτό σχεδιάστηκε για να χρησιμοποιηθεί ως αισθητήριο σε 
+              ένα φασματογράφο φράγματος για τις ανάγκες πειραμάτων υψηλών ενεργειών 
+              και παρουσιάστηκε μαζί με το <a href="http://villaolmo.mib.infn.it/ICATPP8th_2003/High Energy Physics/Maltezos.pdf">συνολικό 
+              project</a> στο &quot;<a href="http://villaolmo.mib.infn.it/Conference2003.html" target="_blank">8th 
+              ICATPP Conference on Astroparticle, Particle, Space Physics, Detectors 
+              and Medical Physics Applications</a>&quot; το 2003 στο Como της 
+              Ιταλίας. Η λειτουργία του αποσκοπεί στο να παίρνει 1-D δείγματα 
+              από ένα photodiode array ειδικών προδιαγραφών της Hamamatsu. Κάθε 
+              φωτο-αισθητήρας αντιστοιχεί σε ένα μήκος κύματος και με την βοήθεια 
+              του computer μπορούμε να πάρουμε το φάσμα ακτινοβολίας σε μία ευρεία 
+              περιοχή. </p>
+            <table width="395" border="1" align="center" cellpadding="0" cellspacing="0">
+              <tr> 
+                <td><img src="block_diagram.gif" width="395" height="179"></td>
+              </tr>
+              <tr>
+                <td><div align="center">Το block διάγραμμα της κατασκευής</div></td>
+              </tr>
+            </table>
+            <p>Το κύκλωμα αυτό είναι ένα 38κάναλο 8bitο A/D με σύνδεση στην σειριακή 
+              θύρα ενός υπολογιστή. Χρησιμοποιεί τον δημοφιλή μικροελεγκτή AT90S2313 
+              και σχεδιάστηκε για χρήση με τις φωτοευαίσθητες επιφάνειες S4114 
+              - 380 και την πλακέτα multiplexing και ενίσχυσης C2334 της Hamamatsu. 
+              Η σχεδίαση πάραυτα είναι αρκετά γενική και μπορεί να χρησιμοποιηθεί 
+              οπουδήποτε χρειάζεται ένα ευέλικτο A/D ή ακόμα και D/A μιας και 
+              το AD7569 της Analog Devices που χρησιμοποιείται τα περιλαμβάνει 
+              και τα δύο. Για παράδειγμα με μικρές τροποποιήσεις το κύκλωμα μπορεί 
+              να χρησιμοποιηθεί ως χαμηλής ποιότητας κάρτα ήχου για την σειριακή 
+              θύρα! Το κύκλωμα ταιριάζει ακόμη σε περιπτώσεις data loging και 
+              data acquisition χαμηλής ταχύτητας.</p>
+            <table width="550" border="1" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="550" height="361">
+                    <param name=movie value="scrollpcb.swf">
+                    <param name=quality value=high>
+                    <embed src="scrollpcb.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="550" height="361"> 
+                    </embed> </object></td>
+              </tr>
+              <tr> 
+                <td class="My_Text"> <div align="center">Το θεωρητικό κύκλωμα 
+                    γίνεται scroll για να το δείτε ολόκληρο</div></td>
+              </tr>
+            </table>
+            <br> <table width="489" border="1" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                <td><img src="screenshot.jpg" width="485" height="318"></td>
+              </tr>
+              <tr> 
+                <td class="My_Text"> <div align="center">Εικόνα από την εκτέλεση 
+                    του προγράμματος</div></td>
+              </tr>
+            </table>
+            <p>
+            <table border="0" cellspacing="0" cellpadding="0" width="700">
+              <tr align="center"> 
+                <td> <table width="165" border="1" cellspacing="0" cellpadding="5">
+                    <tr> 
+                      <td class="SmalltextLabel"> Τα VIs που χρησιμο-ποιήθηκαν 
+                        κατά την ανάπτυξη</td>
+                    </tr>
+                    <tr> 
+                      <td class="Smalltext"> <p><a href="spectrographvi.zip">Spectrograph</a><br>
+                          <a href="readRS232.html">Read RS 232</a></p></td>
+                    </tr>
+                  </table>
+                  <br> <table width="165" border="1" cellspacing="0" cellpadding="5">
+                    <tr> 
+                      <td class="SmalltextLabel"> <p>Πρόγραμμα σε C Που δημιουργεί 
+                          τους επιθυμητούς παλμούς<br>
+                          στην παράλληλη θύρα</p></td>
+                    </tr>
+                    <tr> 
+                      <td class="Smalltext"> <p><a href="pulses.c">pulses.c</a></p></td>
+                    </tr>
+                  </table></td>
+                <td> <table width="165" border="1" cellspacing="0" cellpadding="5">
+                    <tr> 
+                      <td class="SmalltextLabel"> Τα προγράμματα σε assembly για 
+                        AVR </td>
+                    </tr>
+                    <tr> 
+                      <td class="Smalltext" valign="top" height="64"> <a href="tSendMessage.asm">Δοκιμαστικό 
+                        πρόγραμμα που στέλνει ένα μύνημα στην σειριακή θύρα</a><br> 
+                        <a href="tReceiveAnalogData.asm">Πρώτο απλό πρόγραμμα 
+                        που λειτουργεί σαν πολύ γρήγορο πολύμετρο σε συνεργασία 
+                        με το ReadRS232.vi</a><br> <a href="photo2rs.asm">Τελικό 
+                        πρόγραμμα που στέλνει τα multiplexed δεδομένα στο PC</a></td>
+                    </tr>
+                  </table></td>
+                <td> <table width="165" border="1" cellspacing="0" cellpadding="5">
+                    <tr> 
+                      <td class="SmalltextLabel"> Σχετικά Databooks</td>
+                    </tr>
+                    <tr> 
+                      <td class="Smalltext" valign="top" height="64"> <a href="http://www.analog.com/productSelection/pdf/1315_b.pdf">AD7569.pdf</a><br> 
+                        <a href="http://www.atmel.com/atmel/acrobat/doc0839.pdf">AT90S2313.PDF</a><br> 
+                        <a href="http://www.atmel.com/atmel/acrobat/doc0856.pdf">AVRInstructions.PDF</a><br> 
+                        <a href="http://pdfserv.maxim-ic.com/arpdf/MAX220-MAX249.pdf">max232.pdf</a><br> 
+                        <a href="http://eu.st.com/stonline/books/pdf/docs/2298.pdf">tl072.pdf</a></td>
+                    </tr>
+                  </table>
+                  <br> <table width="165" border="1" cellspacing="0" cellpadding="5">
+                    <tr> 
+                      <td class="SmalltextLabel"> <p>Και πρόγραμμα σε matlab που 
+                          διαβάζει την εικόνα...</p></td>
+                    </tr>
+                    <tr> 
+                      <td class="Smalltext"> <p><a href="spectrograph.html">spectrograph.m</a><br>
+                          <a href="spectrograph.zip">Πακέτο με GUI</a></p></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table></p>
+            </td>
+        </tr>
+        <tr> 
+          <td valign="top" class="My_Text"> <script language="JavaScript" src="../relative.js">
+</script> </td>
+        </tr>
+      </table>
+<!-- #EndEditable --></td>
+    <td bgcolor="#FFFFFF"></td>
+    <td background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td height="25" colspan="3" valign="bottom" background="../../rootfiles/templateDown185.gif"> 
+      <table width="100" height="25" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="3" colspan="2"></td>
+        </tr>
+        <tr> 
+          <td width="10"></td>
+          <td valign="middle"><a href="../../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"><img src="../../rootfiles/ihome.gif" width="13" height="13" border="0" alt="Home"></a>&nbsp;<a href="../index.html" onMouseOver="MM_displayStatusMsg('Electronics');return document.MM_returnValue"><img src="../../rootfiles/ielect.gif" width="13" height="13" border="0" alt="Electronics"></a><a href="../../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"></a>&nbsp;<a href="../../programming/index.html" onMouseOver="MM_displayStatusMsg('Programming');return document.MM_returnValue"><img src="../../rootfiles/iprog.gif" width="13" height="13" border="0" alt="Programming"></a>&nbsp;<a href="../../mydocuments/index.html" onMouseOver="MM_displayStatusMsg('My documents');return document.MM_returnValue"><img src="../../rootfiles/imydoc.gif" width="13" height="13" border="0" alt="My documents"></a>&nbsp;<a href="../../find/index.html" onMouseOver="MM_displayStatusMsg('Find');return document.MM_returnValue"><img src="../../rootfiles/ihelp.gif" width="13" height="13" border="0" alt="Find"></a></td>
+        </tr>
+      </table></td>
+    <td height="25" background="../../rootfiles/templateDownMiddle.gif"></td>
+    <td height="25" colspan="3"><img src="../../rootfiles/templateDown242.gif" width="242" height="25"></td>
+  </tr>
+</table>
+<br>
+<table width="740" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td><font size="1" style="text-align: justify;">Οι κατασκευές, τα προγράμματα 
+        και όλο το περιεχόμενο του site ανήκουν σε εμένα προσωπικά, όσο αυτό δεν 
+        παραβιάζει δικαιώματα άλλων και δημοσιεύονται για ενημερωτικούς σκοπούς. 
+        Καμία εγγύηση δεν παρέχεται για οποιαδήποτε χρήση τους και καμία ευθύνη 
+        δε φέρω για οποιεσδήποτε ζημιές μπορεί να προκαλέσουν. Για επαγγελματική 
+        χρήση ή αναδημοσίευση μέρους ή του συνόλου του περιεχομένου του site, 
+        επικοινωνήστε μαζί μου.</font><br /><br />
+        <center><font size="1">Δημήτρης Κουζής - Λουκάς | (c) 2001-2004 | Dimitris Kouzis 
+          - Loukas</font></center>
+	</td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/spectrograph/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:41:18 GMT -->
+</html>

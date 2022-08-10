@@ -1,0 +1,361 @@
+<html><!-- #BeginTemplate "/Templates/maintemplate.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/pcb.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:37:57 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Πλακέτες (PCB)</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "meta tags" -->
+<meta name="description" content="Ηλεκτρονικά και low - level προγραμματισμός Electronics and low level programming">
+<meta name="keywords" content="electronic ηλεκτρονικα assembly avr atmel pic microchip st alarm remote control laser power suply tips how to hardware filter φιλτρα semiconductor pcb">
+<!-- #EndEditable -->
+<meta name="keywords" content="temfe τεμφε semfe - σεμφε electronics ηλεκτρονικά programming flash c  pascal music drum n bass hardware assembly ασκηση εργαστηριο">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<SCRIPT LANGUAGE="javascript" src="../scripts.js"></script>
+<link rel="stylesheet" href="../mystyles.css" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000" background="../rootfiles/marble.jpg" leftmargin="0" marginwidth="0" marginheight="0" topmargin="25">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="4" height="1"><img src="../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="176" height="1"><img src="../rootfiles/spacer.gif" width="176" height="1" border="0"></td>
+    <td width="313" height="1"><img src="../rootfiles/spacer.gif" width="313" height="1" border="0"></td>
+    <td width="233" height="1"><img src="../rootfiles/spacer.gif" width="233" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="4" height="1"><img src="../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+  </tr>
+  <tr> 
+    <td  height="24" colspan="3"><img src="../rootfiles/templateUp185.gif" width="185" height="24"></td>
+    <td height="24" background="../rootfiles/templateUpMiddle.gif"></td>
+    <td height="24" colspan="3"><img src="../rootfiles/templateUp242.gif" width="242" height="24"></td>
+  </tr>
+  <tr> 
+    <td height="5" background="../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td height="5" background="../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../rootfiles/templateLeft.gif"></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td colspan="3" bgcolor="#FFFFFF"> <!-- #BeginEditable "contains" --> 
+        <SCRIPT language="">
+UpdateTitlebar("<a href=\"electronics/index.htm\" target=\"mainFrame\"><img src=\"bar/electronics.gif\" border=0></a><a href=\"electronics/pcb.htm\" target=\"mainFrame\"><img src=\"bar/pcb.gif\" border=0></a>","<font face='Verdana, Arial, Helvetica, sans-serif'>Πλακέτες!</font>")
+</script>
+        <table width="720" border="0" cellspacing="0" cellpadding="5">
+          <tr> 
+            <td valign="top" height="68" class="Title"> Πλακέτες (PCB)</td>
+          </tr>
+          <tr>
+            <td valign="top" class="My_Text" height="46">Κάθε κύκλωμα λαμβάνει 
+              σάρκα και οστά πάνω σε μία πλακέτα. Γύρω από την κατασκευή τους 
+              υπάρχει ένα μυστήριο το οποίο θα προσπαθήσουμε να ξεδιαλύνουμε παρακάτω. 
+              Υπάρχουν τρεις τρόποι για να φτιάξει κάποιος μια πλακέτα:</td>
+          </tr>
+          <tr> 
+            <td valign="middle" align="right" height="32"><img src="../rootfiles/blackline.gif" width="150" height="2"></td>
+          </tr>
+          <tr> 
+            <td valign="top" class="My_Text" height="266"> 
+              <p><img src="images/time.gif" width="120" height="139" align="left">1. 
+                Να χρησιμοποιήσει <b>διάτρητες πλακέτες</b> του εμπορίου. Αυτές 
+                έχουν έτοιμες τρύπες σε κατάλληλες αποστάσεις και από κάτω χαλκό 
+                είτε γύρω από τις τρύπες είτε σε κατακόρυφες γραμμές που περνάνε 
+                από αυτές για να μπορεί κάποιος να κολλήσει πάνω τα εξαρτήματα 
+                που θέλει. Οι συνδέσεις από το ένα εξάρτημα στο άλλο γίνονται 
+                είτε με καλωδιάκια είτε με σύρμα είτε κόβοντας τα κομμάτια του 
+                χαλκού που δεν χρειάζονται (αν πρόκειται για διάτρητες πλακέτες 
+                με γραμμές).</p>
+              
+            <p>Η μέθοδος αυτή είναι η πιο φτηνή και ενδείκνυται σε περιπτώσεις 
+              πρωτοτύπων που αναμένεται να γίνουν κάποιες διορθώσεις μέχρι να 
+              επιτευχθεί η ορθή λειτουργία.</p>
+              <p><img src="images/compact.gif" width="120" height="139" align="left">2. 
+                <b>Πλακέτα με χαλκό</b>. Αυτές οι πλακέτες έχουν ολόκληρη τη μία 
+                επιφάνειά τους επιστρωμένη με ένα λεπτό φύλλο χαλκού. Για τα καλύτερα 
+                αποτελέσματα, πρώτα κάνουμε τις τρύπες με ένα τρυπανάκι του εμπορίου. 
+              </p>
+              <p><img src="images/star.gif" width="15" height="16">&nbsp;&nbsp;&nbsp;<i>Βήμα 
+                1ο</i>. Για να γίνουν οι τρύπες σωστά είναι καλό να έχουμε έναν 
+                οδηγό, δηλαδή είτε μία εκτύπωση με το που θα τοποθετηθούν τα εξαρτήματα, 
+                είτε τα ίχνη του εξαρτήματος που θέλουμε να τοποθετήσουμε. π.χ. 
+                για ένα ολοκληρωμένο κύκλωμα μπορούμε να πάρουμε ένα λεπτό χαρτί, 
+                να πιέσουμε το ο.κ. πάνω του μέχρι να ανοίξουν οι τρύπες από τα 
+                ποδαράκια και στη συνέχεια να χρησιμοποιήσουμε τα σημάδια από 
+                στο χαρτί για να ανοίξουμε τις τρύπες.</p>
+              
+            <p><img src="images/star.gif" width="15" height="16">&nbsp;&nbsp;&nbsp;<i>Βήμα 
+              2ο</i> (και σημαντικότερο). Όταν πλέον έχουμε ολοκληρώσει το άνοιγμα 
+              των τρυπών αυτές μπορούνε να μας οδηγήσουν για να ζωγραφίσουμε (!) 
+              σωστά το κύκλωμά μας. Πρώτα καθαρίζουμε την πλακέτα με συρματάκι 
+              για τα πιάτα ώστε να είναι καθαρή και λεία. Στη συνέχεια με ένα 
+              ανεξίτηλο μαρκαδόρο που προστατεύει από το νερό (waterproof) κάνουμε 
+              τις απαραίτητες συνδέσεις τις οποίες στην προηγούμενη περίπτωση 
+              θα κάναμε με συρματάκια. π.χ. Όταν το θεωρητικό λέει ότι πρέπει 
+              να συνδεθεί το pin3 του IC1 με το μεσαίο ποδαράκι του τρανζίστορ 
+              TR5 εμείς θα ενώσουμε την τρυπούλα του pin3 του IC1 με την τρυπούλα 
+              που αντιστοιχεί στο μεσαίο ποδαράκι του TR5. Το πως θα καταφέρουμε 
+              να κάνουμε όλες τις απαραίτητες συνδέσεις σε μία μόνο επιφάνεια 
+              χαλκού είναι μια τέχνη που μαθαίνεται σιγά-σιγά. Αρχίζουμε πάντως 
+              από τις προφανείς συνδέσεις δηλαδή αυτές που είναι πολύ κοντά μεταξύ 
+              τους και αφήνουμε για το τέλος τις συνδέσεις των γραμμών τροφοδοσίας 
+              οι οποίες είναι οι πιο μεγάλες. (Στην περίπτωση που κάποιες συνδέσεις 
+              δεν χωράνε να γίνουν σε μία επιφάνεια χαλκού, βάζουμε jumperακια 
+              δηλαδή συρματάκια στην από πάνω πλευρά του χαλκού ή αν οι συνδέσεις 
+              που απομένουν είναι πολλές, χρησιμοποιούμε πλακέτες διπλής όψεως, 
+              δηλαδή με χαλκό και από τις δύο πλευρές αλλά αυτό είναι πολύ σπάνιο 
+              για ερασιτεχνικές κατασκευές τις οποίες καλύπτει κυρίως αυτή η διαδικασία).</p>
+              
+            <p><img src="images/star.gif" width="15" height="16">&nbsp;&nbsp;&nbsp;<i>Βήμα 
+              3ο</i>. &quot;Η αποχάλκωση&quot; Όταν πλέον έχουμε ζωγραφίσει όλο 
+              το κύκλωμα το βυθίζουμε σε ένα διάλυμα ένυδρου τριχλωριούχου σιδήρου 
+              γνωστό και ως &quot;υγρό για αποχάλκωση&quot;. Στα σημεία που έχουμε 
+              ζωγραφίσει, το υγρό δεν ακουμπά (λόγω του ότι το στυλό είναι waterproof) 
+              και δεν αλλοιώνει το χαλκό. Στα μη ζωγραφισμένα σημεία τον φθείρει 
+              και στο τέλος έχουμε την πλακέτα με χαλκό - σύρμα μόνο εκεί που 
+              ζωγραφίσαμε. Εκτός από το παραπάνω χημικό υπάρχουν και αρκετά άλλα 
+              που μπορεί να αποχαλκώνουν την πλακέτα ακόμα και σε 5 δευτερόλεπτα 
+              αλλά ο ένυδρος τριχλωριούχος σίδηρος (ή ότι αντίστοιχο έχει το κατάστημα 
+              ηλεκτρονικών σας) είναι ο πιο ασφαλής και διαδεδομένος τρόπος. Καλό 
+              είναι το υγρό αυτό να είναι ζεστό και επιπλέον να μετακινούμε ελαφρά 
+              την πλακέτα μέσα στο υγρό ώστε να επιταχυνθεί η διαδικασία. Μετά 
+              το τέλος της αποχάλκωσης καθαρίζουμε και πάλι την πλακέτα με συρματάκι 
+              για τα πιάτα και είναι έτοιμη για να κολήσουμε τα εξαρτήματά μας 
+              πάνω της.</p>
+              <p>Ο δεύτερος αυτός τρόπος είναι ο πιο διαδεδομένος για σοβαρά πρωτότυπα 
+                που ξέρουμε ότι θα δουλέψουν χωρίς πολλές αλλαγές ή μικρά - μεσαία 
+                κυκλώματα από περιοδικά. Είναι πολύ αξιόπιστος και τα αποτελέσματά 
+                του μπορεί (και πρέπει) να είναι πολύ εντυπωσιακά. Παρόλη την 
+                εκτενή διαδικασία, δεν διαρκεί συνήθως (με λίγη εμπειρία) περισσότερο 
+                από μία ώρα.</p>
+              <p><img src="images/perfect.gif" width="120" height="139" align="left">3. 
+                <b>Φωτοευαίσθητες πλακέτες</b>. Αυτές οι πλακέτες είναι ακριβώς 
+                ίδιες με τις παραπάνω μόνο που πάνω από το στρώμα του χαλκού έχουν 
+                ένα στρώμα φωτοευαίσθητου υλικού όμοιου με αυτού των φωτογραφικών 
+                film (ευαίσθητο όμως στην περιοχή των UV). Εναλλακτικά, παίρνουμε 
+                μια κλασική πλακέτα με χαλκό, την ψεκάζουμε με φωτοευαίσθητο spray 
+                και την αφήνουμε να στεγνώσει σε σκοτεινό περιβάλλον (πιο οικονομικός 
+                τρόπος αλλά λιγότερο αξιόπιστος). Σε αυτή τη περίπτωση χρειάζεται 
+                να έχουμε το σχέδιο της πλακέτας έτοιμο από κάποιο περιοδικό ή 
+                εκτύπωση από το PC και να το έχουμε φωτοτυπήσει σε διαφάνεια. 
+                Το φωτοευαίσθητο υλικό παίζει το ρόλο του μαρκαδόρου της προηγούμενης 
+                περίπτωσης. Συγκεκριμένα όπου η διαφάνεια έχει ζωγραφισμένο σύρμα, 
+                το φωτοευαίσθητο υλικό δεν &quot;καίγεται&quot; και κατά την εμφάνισή 
+                του παραμένει. Στην φάση της αποχάλκωσης τώρα, όπου έχει παραμείνει 
+                το φωτοευαίσθητο υλικό δεν επηρεάζει το υγρό με συνέπεια να παραμένει 
+                ο χαλκός και να σχηματίζεται τελικά η πλακέτα που είχαμε στη διαφάνεια. 
+                Η διαδικασία έχει ως εξής:</p>
+              <p><img src="images/star.gif" width="15" height="16">&nbsp;&nbsp;&nbsp;<i>Βήμα 
+                1ο</i>. Τοποθετούμε τη διαφάνεια πάνω στη πλακέτα (αφού αφαιρέσουμε 
+                το προστατευτικό της κάλυμμα) και την εκθέτουμε για 10 λεπτά σε 
+                υπεριώδη ακτινοβολία (από μια κατάλληλη λάμπα π.χ. την HPL-N της 
+                PHILIPS την οποία βρίσκουμε σε καταστήματα ανταλλακτικών ηλεκτρονικών 
+                ή ακόμα και σε καταστήματα με λάμπες, πιθανώς μετά από παραγγελία).</p>
+              <p><img src="images/star.gif" width="15" height="16">&nbsp;&nbsp;&nbsp;<i>Βήμα 
+                2ο</i>. ( * Προσοχή, πρέπει να γίνει σε σκοτεινό περιβάλλον) Εμφανίζουμε 
+                την πλακέτα βάζοντας την στο ειδικό υγρό για εμφάνιση πλακετών 
+                που βρίσκουμε σε καταστήματα ηλεκτρονικών. Μετά από 1 λεπτό το 
+                σχέδιο της διαφάνειας εμφανίζεται ως δια μαγείας μπροστά στα μάτια 
+                μας. Αν βλέπουμε κανένα μικρό κενό ή κόψιμο μπορούμε να το διορθώσουμε 
+                τώρα με μαρκαδόρο.</p>
+              
+            <p><img src="images/star.gif" width="15" height="16">&nbsp;&nbsp;&nbsp;<i>Βήμα 
+              3ο</i>. Το βήμα της αποχάλκωσης όπως περιγράφηκε στην μέθοδο 2.</p>
+              <p><img src="images/star.gif" width="15" height="16">&nbsp;&nbsp;&nbsp;<i>Βήμα 
+                4ο</i>. Στο τέλος αυτή τη φορά τρυπάμε την πλακέτα με οδηγό τα 
+                pads (νησίδες) του χαλκού.</p>
+              
+            <p>Η διαδικασία αυτή είναι αρκετά γρήγορη (αν παραβλέψεις βέβαια τη 
+              σχεδίαση του κυκλώματος στο PC) και η πιο ποιοτική. Αυτή χρησιμοποιούν 
+              και οι επαγγελματίες, με πιο ισχυρές λάμπες και πιο ακριβά χημικά 
+              εμφάνισης και αποχάλκωσης. Είναι βέβαια και η ποιο ακριβή αφού οι 
+              φωτοευαίσθητες πλακέτες κοστίζουν ακριβότερα από όλες τις άλλες. 
+              Θα χρησιμοποιήσετε αυτή τη τεχνική για πλακέτες από περιοδικά ή 
+              PC όταν είναι αρκετά μεγάλες ή όταν θέλουμε μεγάλη ακρίβεια και 
+              φυσικά ζητάμε επαγγελματική και άψογη ποιότητα.</p>
+              
+            <table width="100%" border="1" cellspacing="0" cellpadding="0">
+              <tr> 
+                  <td class="TableTitle" height="27"> Παρατηρήσεις</td>
+                </tr>
+                <tr> 
+                  <td height="347" class="My_Text"> 
+                    <ol>
+                      
+                    <li>Υπάρχουν και καταστήματα που τυπώνουν τις πλακέτες σας 
+                      αλλά το κόστος τους είναι (σχετικά) ασύμφορο για μικρές 
+                      ποσότητες, ακόμα περισσότερο αν τους ζητήσετε να σας τη 
+                      σχεδιάσουν κιόλας από το θεωρητικό σας κύκλωμα.</li>
+                      
+                    <li>Πολύ χρόνο και χρήμα μπορεί να σας εξοικονομήσει ο Η/Υ 
+                      μιας κι εκεί μπορείτε να κάνετε άπειρες δοκιμές με μηδενικό 
+                      κόστος μέχρι να ελαχιστοποιήσετε το μέγεθος της πλακέτας 
+                      σας και φυσικά θα είστε σίγουρος ότι δεν ξεχάσατε συνδέσεις 
+                      και ότι το κύκλωμα δουλεύει (αν το έχετε εξομοιώσει πιο 
+                      πριν).</li>
+                      <li>Αν θέλετε οι πλακέτες σας να λάμπουν στον χρόνο και 
+                        να μη φθείρονται μη ξεχάσετε να τις περάσετε μετά την 
+                        συγκόλληση των εξαρτημάτων και την επαλήθευση ότι δουλεύει 
+                        με κάποιο προστατευτικό βερνίκι. Θα τις κάνει να φαίνονται 
+                        καταπληκτικές και θα τις προστατεύει από την οξείδωση 
+                        και τις ηλεκτροστατικές εκφορτίσεις.</li>
+                      <li> Υπάρχουν πολλές ακόμα μικρές συμβουλές και λεπτομέρειες 
+                        σχετικές με την κατασκευή πλακετών. Τα παραπάνω αποτελούν 
+                        όλες τις βασικές γνώσεις που πρέπει κανείς να έχει όμως:</li>
+                    </ol>
+                    <p align="center"><b>Η κατασκευή πλακετών είναι τέχνη και 
+                      το βασικό συστατικό για μια <br>
+                      επιτυχημένη πλακέτα είναι μόνο η εμπειρία</b></p>
+                  </td>
+                </tr>
+              </table>
+              <p><br>
+              </p>
+            </td>
+          </tr>
+          <tr> 
+            <td valign="top" class="My_Text"> 
+              <table width="710" border="1" cellspacing="0" cellpadding="5">
+              <tr> 
+                  <td colspan="4" height="34" class="TableTitle"> Οι τρεις μέθοδοι, 
+                    τα πλεονεκτήματα και τα μειονεκτήματά τους</td>
+                </tr>
+                <tr> 
+                  <td height="23" width="192" class="TableElement">&nbsp;</td>
+                  <td class="TableLabel" width="195">Πλεονεκτήματα</td>
+                  <td width="167" align="center" class="TableLabel">Μειονεκτήματα</td>
+                  <td width="154" class="TableLabel">Υλικά </td>
+                </tr>
+                <tr> 
+                  <td width="192" class="TableElement">Διάτρητες πλακέτες</td>
+                  <td class="TableProperty" width="195"><font size="1">Πολύ γρήγορος 
+                    χρόνος σχεδίασης, φοβερή οικονομία και δυνατότητα για εύκολες 
+                    τροποποιήσεις</font></td>
+                  <td width="167"><font size="1">Πολλές φορές δεν βλέπονται, φθείρονται 
+                    περισσότερο με το χρόνο</font></td>
+                  <td width="154"><font size="1">1. Διάτρητη πλακέτα<br>
+                    2. Λεπτό καλώδιο ή σύρμα</font></td>
+                </tr>
+                <tr> 
+                  <td height="36" width="192" class="TableElement">Πλακέτες με 
+                    χαλκό</td>
+                  <td class="TableProperty" width="195" height="36"><font size="1">Καλή 
+                    εμφάνιση, αντοχή με τον χρόνο, σχετική οικονομία, αξιόπιστη 
+                    και συμπαγής κατασκευή</font></td>
+                  <td width="167" height="36"><font size="1">Σχεδίαση των διαδρόμων 
+                    με το χέρι, σχετικά χρονοβόρα διαδικασία, δύσκολες τροποποιήσεις</font></td>
+                  <td width="154" height="36"><font size="1">1. Πλακέτα με χαλκό<br>
+                    2. Υγρό για αποχάλκωση πχ ένυδρος τριχλωριούχος σίδηρος<br>
+                    3. Waterproof μαρκαδόρος</font></td>
+                </tr>
+                <tr> 
+                  <td height="19" width="192" class="TableElement">Φωτοευαίσθητες 
+                    πλακέτες</td>
+                  <td class="TableProperty" width="195" height="19"><font size="1">Άψογη 
+                    επαγγελματική εμφάνιση, μεγάλη αξιοπιστία, δυνατότητα παραγωγής 
+                    σε μεγάλες ποσότητες, εργασία με computer</font></td>
+                  <td width="167" height="19"><font size="1">Σχετικά ακριβή μέθοδος, 
+                    απαιτεί εμπειρία, χρειάζονται εξεζητημένα εργαλεία, δεν σου 
+                    πάει η καρδιά να κάνεις τροποποιήσεις.</font></td>
+                  <td width="154" height="19"><font size="1">1. Φωτοευαίσθητη 
+                    πλακέτα<br>
+                    2. Υγρό εμφάνισης<br>
+                    3. Υγρό αποχάλκωσης<br>
+                    4. Λάμπα υπεριωδών <br>
+                    5. Διαφάνεια της πλακέτας<br>
+                    6. Σκοτεινός χώρος</font></td>
+                </tr>
+                <tr> 
+                  <td height="28" colspan="4" class="My_Text"><font size="1">* 
+                    Σε όλες τις περιπτώσεις θα σας χρειαστεί συρματάκι κουζίνας 
+                    για να καθαρίσετε την πλακέτα. Στην δεύτερη και τρίτη περίπτωση 
+                    θα χρειαστούν επιπλέον 1 λαβίδα, μία πλαστική λεκανούλα για 
+                    την αποχάλκωση και ένα τρυπανάκι μικρής ισχύος.<br>
+                    * Τα περισσότερα από αυτά τα εξαρτήματα θα τα βρείτε σε καταστήματα 
+                    με ανταλλακτικά ηλεκτρονικών.</font></td>
+                </tr>
+              </table>
+              <br>
+              <table width="100%" border="1" cellspacing="0" cellpadding="5">
+              <tr> 
+                  
+                <td height="23" class="TableTitle"> Σχετικά</td>
+                </tr>
+                <tr> 
+                  
+                <td height="23" colspan="-2"> 
+                  <ol>
+                      <li><a href="shock/index.html">Ηλεκτροσόκ</a></li>
+                      <li><a href="modulator/index.html">Διαμορφωτής IR</a></li>
+                      <li><a href="alarm/index.html">Συναγρμός με Laser</a></li>
+                      <li><a href="power/index.html">Το τροφοδοτικό</a></li>
+                      <li><a href="mobilesafe/index.html">Συναγερμός τσάντας</a></li>
+		      <li><a href="lasertrigger/index.html">Συγχρονισμός Laser 		      και κάμερας</a></li>
+                      
+                    <li><a href="spectrograph/index.html">Φασματογράφος</a></li>
+                      <li><a href="pcb.html">Πλακέτες</a></li>
+                      <li><a href="disassembly/index.html">Disassembly</a></li>
+                      <li><a href="index.html">Άλλα θέματα ηλεκτρονικών</a></li>
+                      <li><a href="../mydocuments/6oe3amino/index.html">Τεχνικές 
+                        πειραματικής φυσικής ΤΕΜΦΕ</a></li>
+                    </ol>
+                  </td>
+                </tr>
+              </table>
+              
+            </td>
+          </tr>
+        </table>
+  <!-- #EndEditable --></td>
+    <td bgcolor="#FFFFFF"></td>
+    <td background="../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td background="../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td height="25" colspan="3" valign="bottom" background="../rootfiles/templateDown185.gif"> 
+      <table width="100" height="25" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="3" colspan="2"></td>
+        </tr>
+        <tr> 
+          <td width="10"></td>
+          <td valign="middle"><a href="../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"><img src="../rootfiles/ihome.gif" width="13" height="13" border="0" alt="Home"></a>&nbsp;<a href="index.html" onMouseOver="MM_displayStatusMsg('Electronics');return document.MM_returnValue"><img src="../rootfiles/ielect.gif" width="13" height="13" border="0" alt="Electronics"></a><a href="../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"></a>&nbsp;<a href="../programming/index.html" onMouseOver="MM_displayStatusMsg('Programming');return document.MM_returnValue"><img src="../rootfiles/iprog.gif" width="13" height="13" border="0" alt="Programming"></a>&nbsp;<a href="../mydocuments/index.html" onMouseOver="MM_displayStatusMsg('My documents');return document.MM_returnValue"><img src="../rootfiles/imydoc.gif" width="13" height="13" border="0" alt="My documents"></a>&nbsp;<a href="../find/index.html" onMouseOver="MM_displayStatusMsg('Find');return document.MM_returnValue"><img src="../rootfiles/ihelp.gif" width="13" height="13" border="0" alt="Find"></a></td>
+        </tr>
+      </table></td>
+    <td height="25" background="../rootfiles/templateDownMiddle.gif"></td>
+    <td height="25" colspan="3"><img src="../rootfiles/templateDown242.gif" width="242" height="25"></td>
+  </tr>
+</table>
+<br>
+<table width="740" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td><font size="1" style="text-align: justify;">Οι κατασκευές, τα προγράμματα 
+        και όλο το περιεχόμενο του site ανήκουν σε εμένα προσωπικά, όσο αυτό δεν 
+        παραβιάζει δικαιώματα άλλων και δημοσιεύονται για ενημερωτικούς σκοπούς. 
+        Καμία εγγύηση δεν παρέχεται για οποιαδήποτε χρήση τους και καμία ευθύνη 
+        δε φέρω για οποιεσδήποτε ζημιές μπορεί να προκαλέσουν. Για επαγγελματική 
+        χρήση ή αναδημοσίευση μέρους ή του συνόλου του περιεχομένου του site, 
+        επικοινωνήστε μαζί μου.</font><br /><br />
+        <center><font size="1">Δημήτρης Κουζής - Λουκάς | (c) 2001-2004 | Dimitris Kouzis 
+          - Loukas</font></center>
+	</td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/pcb.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:38:01 GMT -->
+</html>

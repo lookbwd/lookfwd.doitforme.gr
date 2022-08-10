@@ -1,0 +1,10 @@
+To optimize an MS-DOS program 
+
+Double - click My Computer. 
+Locate and select the program you want to optimize. 
+On the File menu, click Properties.
+The settings you specify will be used each time you start the program by double - clicking its icon. If you start the program from an MS-DOS window, these settings won't be used. 
+
+Notes 
+To specify whether MS-DOS starts in a full screen or in a window, change the Run properties on the Program tab. Note that some MS-DOS - based programs cannot run in a window. 
+The MS-DOS Prompt Properties dialog box replaces the PIF Editor used in earlier versions of Windows.

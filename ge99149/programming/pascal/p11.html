@@ -1,0 +1,521 @@
+<html><!-- #BeginTemplate "/Templates/maintemplate.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/programming/pascal/p11.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:44:02 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Κωδικοποίηση Huffman</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "meta tags" -->
+<meta name="description" content="Το site για το τεμφε τον προγραμματισμό, τα ηλεκτρονικά, την μουσική και το internet από τον Δημήτρη Κουζή - Λουκά (The TEMFE, programming, electronics, music and internet site by Dimitris Kousis - Loukas)">
+<!-- #EndEditable -->
+<meta name="keywords" content="temfe τεμφε semfe - σεμφε electronics ηλεκτρονικά programming flash c  pascal music drum n bass hardware assembly ασκηση εργαστηριο">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<SCRIPT LANGUAGE="javascript" src="../../scripts.js"></script>
+<link rel="stylesheet" href="../../mystyles.css" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000" background="../../rootfiles/marble.jpg" leftmargin="0" marginwidth="0" marginheight="0" topmargin="25">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="176" height="1"><img src="../../rootfiles/spacer.gif" width="176" height="1" border="0"></td>
+    <td width="313" height="1"><img src="../../rootfiles/spacer.gif" width="313" height="1" border="0"></td>
+    <td width="233" height="1"><img src="../../rootfiles/spacer.gif" width="233" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+  </tr>
+  <tr> 
+    <td  height="24" colspan="3"><img src="../../rootfiles/templateUp185.gif" width="185" height="24"></td>
+    <td height="24" background="../../rootfiles/templateUpMiddle.gif"></td>
+    <td height="24" colspan="3"><img src="../../rootfiles/templateUp242.gif" width="242" height="24"></td>
+  </tr>
+  <tr> 
+    <td height="5" background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td height="5" background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td colspan="3" bgcolor="#FFFFFF"> <!-- #BeginEditable "contains" --> 
+        <SCRIPT language="">
+UpdateTitlebar("<a href=\"programming/index.htm\" target=\"mainFrame\"><img src=\"bar/program.gif\" border=\"0\"></a><a href=\"programming/pascal/index.htm\" target=\"mainFrame\"><img src=\"bar/pascal.gif\" border=\"0\"></a>","<font face='Verdana, Arial, Helvetica, sans-serif'>Κωδικοποίηση Huffman</font>")
+</script>
+        <table border="0" cellspacing="0" cellpadding="5" width="720">
+          <tr> 
+            <td valign="top" height="48" class="Title"> Κωδικοποίηση Huffman</td>
+          </tr>
+          <tr> 
+            <td valign="top" height="131" class="My_Text"> 
+              <p><b>Κωδικοποίηση Huffman σε Pascal</b> (<a href="downloads/huffman.p">download</a>)</p>
+              <p><span lang=EL><b>Εκφώνηση: </b>Α. Σχεδιάστε ένα πρόγραμμα σε 
+                pascal που υλοποιεί τον αλγόριθμο για την κατασκευή δέντρου Huffman. 
+                Χρησιμοποιείστε για σύμβολα μόνο τα γράμματα του Λατινικού αλφαβήτου 
+                και το κενό και για συχνότητες αυτές του πίνακα της φωτοτυπίας</span></p>
+              <p><span lang=EL>Β. </span><span lang=EL>Προαιρετικά: Σχεδιάστε 
+                διαλογικό πρόγραμμα σε pascal που να έχει τη δυνατότητα να κωδικοποιήσει 
+                και να αποκωδικοποιήσει αγγλικό κείμενο (αγνοώντας σημεία ατίξης, 
+                κ.λ.π) χρησιμοποιώντας το παραπάνω πρόγραμμα.</span></p>
+              <p><span lang=EL><br>
+                Τα <a href="downloads/huffman.html">αποτελέσματα</a> που αντιστοιχούν 
+                στο παρακάτω δέντρο huffman και τους <a href="downloads/binaries.txt">κωδικούς</a>. 
+                Για καλύτερη ποιότητα, κάντε click πάνω στην εικόνα:</span></p>
+              <p align="center"><a href="downloads/huffman.pdf"><img src="images/huffman.gif" width="590" height="338" border="0"></a> 
+              </p>            
+              Ο παρακάτω πίνακας δείχνει τον κώδικα κάθε γράμματος. Τα αποτελέσματα 
+              είναι όπως τα περιμέναμε.Τα γράμματα που συναντόνται ποιό συχνά 
+              στο Αγγλικό αλφάβητο έχουν μικρότερο πλάτος. Με αυτόν τον τρόπο 
+              το αρχικό κείμενο συμπιέζεται αρκετά:<br>
+              <br>
+              <table width="75%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableLabel">char</td>
+                  <td class="TableLabel">code</td>
+                  <td class="TableLabel">char</td>
+                  <td class="TableLabel">code</td>
+                  <td class="TableLabel">char</td>
+                  <td class="TableLabel">code</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement">A<br>
+                    B<br>
+                    C<br>
+                    D<br>
+                    E<br>
+                    F<br>
+                    G<br>
+                    H<br>
+                    I</td>
+                  <td class="TableProperty"> 0100<br>
+                    011111<br>
+                    001000<br>
+                    01100<br>
+                    110<br>
+                    001010<br>
+                    0010010<br>
+                    1111<br>
+                    1000 </td>
+                  <td class="TableElement"> J<br>
+                    K<br>
+                    L <br>
+                    M <br>
+                    N <br>
+                    O <br>
+                    P <br>
+                    Q <br>
+                    R </td>
+                  <td class="TableProperty">00100111<br>
+                    00100110<br>
+                    01101<br>
+                    01110<br>
+                    1001<br>
+                    0101<br>
+                    101100<br>
+                    1011011<br>
+                    1110 </td>
+                  <td class="TableElement">S<br>
+                    T <br>
+                    U <br>
+                    V <br>
+                    W <br>
+                    X <br>
+                    Y <br>
+                    Z <br>
+                    &lt;space&gt;</td>
+                  <td class="TableProperty">1010<br>
+                    0011<br>
+                    10111<br>
+                    10110100<br>
+                    001011<br>
+                    101101010<br>
+                    011110<br>
+                    101101011<br>
+                    000 </td>
+                </tr>
+              </table>
+              <p>&nbsp;</p>
+              <p>A. Ας δούμε τις επί μέρους procedures:</p>
+              <p>1. Κατ'αρχάς η <b>δήλωση</b> του κόμβου (node). Όπως βλέπουμε, 
+                αυτός αποτελείται από έναν πραγματικό αριθμό, έναν χαρακτήρα και 
+                δύο δείκτες προς άλλους κόμβους. Συνεπώς η δήλωσή του είναι προφανώς:<br>
+              </p>
+              
+            <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td width="340"> 
+                    <p>type Nodeptr= ^Nodetype;<br>
+                      Nodetype = record<br>
+                      info : char;<br>
+                      posibility : real;<br>
+                      right : Nodeptr;<br>
+                      left : Nodeptr<br>
+                      end;</p>
+                  </td>
+                  <td width="158" align="center" valign="middle"><img src="images/node.gif" width="111" height="67"></td>
+                </tr><tr>
+                  <td width="340">Forest=array[1..maxtrees] of Nodeptr;</td>
+                  <td width="158" align="center" valign="middle"><img src="images/forest.gif" width="148" height="50"></td>
+                </tr>
+              </table>
+              <br>
+              2. Η <a href="p10.html#addnode">κλασική</a> ρουτίνα <b>AddNode</b> 
+              ελαφρώς τροποποιημένη για την περίπτωση:<br>
+              <br>
+              <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>procedure addNode(var listhead: Nodeptr; character:char;<br>
+                      posib : real; left,right : Nodeptr );<br>
+                      var node : Nodeptr;<br>
+                      begin<br>
+                      new(node);<br>
+                      node^.info:=character;<br>
+                      node^.posibility:=posib;<br>
+                      node^.left:=left;<br>
+                      node^.right:=right;<br>
+                      listhead:=node;<br>
+                      end;</p>
+                    </td>
+                </tr>
+              </table>
+              <p>3. H procedure Initialize φορτώνει στο πρόγραμμα τα στοιχεία 
+                του πίνακα από την φωτοτυπία.</p>
+              
+            <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>procedure initialize(var list : Forest ; var n:integer 
+                      ) ;</p>
+                    <p>begin<br>
+                      addNode(list[1], 'a',0.065, nil , nil);<br>
+                      addNode(list[2], 'b',0.013, nil , nil);<br>
+                      addNode(list[3], 'c',0.022, nil , nil);<br>
+                      addNode(list[4], 'd',0.032, nil , nil);<br>
+                      ...<br>
+                      ... <br>
+                      addNode(list[23],'w',0.018, nil , nil);<br>
+                      addNode(list[24],'x',0.001, nil , nil);<br>
+                      addNode(list[25],'y',0.017, nil , nil);<br>
+                      addNode(list[26],'z',0.001, nil , nil);<br>
+                      addNode(list[27],'/',0.172, nil , nil);<br>
+                      n:=maxtrees;<br>
+                      end;</p>
+                    </td>
+                </tr>
+              </table>
+              <p>5. Το πρώτο βήμα του αλγορίθμου Huffman. Ένωση των δύο τελευταίων 
+                δέντρων από την λίστα - δάσος list. Φροντίζουμε έτσι ώστε το δέντρο 
+                με τη μεγαλύτερη πιθανότητα να είναι αριστερά ενώ το άλλο δεξιά.</p>
+              
+            <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>procedure merge_last(var list:Forest ; n,i: integer);<br>
+                      var posib:real;<br>
+                      begin</p>
+                    <p>posib:= list[n-i+1]^.posibility + list[n-i]^.posibility;<br>
+                      if (list[n-i+1]^.posibility &gt; list[n-i]^.posibility) 
+                      then<br>
+                      addNode(list[n-i],' ',posib, list[n-i+1] , list[n-i])<br>
+                      else<br>
+                      addNode(list[n-i],' ',posib, list[n-i], list[n-i+1]);<br>
+                      end;</p>
+                    </td>
+                </tr>
+              </table>
+              <p><br>
+                6. Η κλασική procedure swap που χρησιμοποιείται στην μέθοδο ταξινόμησης 
+                bubblesort, ελαφρώς τροποποιημένη για εναλλαγή δεικτών:</p>
+              
+            <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>procedure swap(var p,q : Nodeptr);<br>
+                      var temp:Nodeptr;<br>
+                      begin<br>
+                      temp:=p;<br>
+                      p:=q;<br>
+                      q:=temp;<br>
+                      end;</p>
+                    </td>
+                </tr>
+              </table>
+              <br>
+              <p>7. Το δεύτερο βήμα του αλγορίθμου Huffman. Ταξινόμηση με την 
+                μέθοδο bubblesort, των δεικτών της λίστας list, έτσι ώστε να έχουν 
+                φθίνουσα πιθανότητα εμφάνισης:</p>
+              
+            <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>procedure rearrange(var list:Forest; n,i: integer);<br>
+                      var count:integer;<br>
+                      begin<br>
+                      for count:=0 to n-i-1 do<br>
+                      if list[n-count-i+1]^.posibility &gt; list[n-count-i]^.posibility 
+                      then<br>
+                      swap(list[n-count-i+1],list[n-count-i]);<br>
+                      end;</p>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              8. Το κυρίως πρόγραμμα είναι, πλέον, απλούστατο:<br>
+              <br>
+              <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement">begin
+                    <p>initialize(list, n); { Arxikopoiisi }</p>
+                    <p>for i:=1 to n do rearrange(list,n,i);<br>
+                      {arxiki taxinomisi me tin me8odo bubblesort}</p>
+                    <p>{ O algori8mos opws dinetai sto fulladio}<br>
+                      for i:=1 to n-1 do<br>
+                      begin<br>
+                      merge_last(list,n,i);<br>
+                      rearrange(list,n,i);<br>
+                      end;</p>
+                    <p>writetree(list[1]); {emfanisi tou telikou dentrou}</p>
+                    <p>end.</p>
+                  </td>
+                </tr>
+              </table>
+              <p>9. Τώρα το μόνο που μας έμεινε είναι η procedure writetree που 
+                γράφει το τελικό δέντρο στο αρχείο huffman.txt και τον κωδικό 
+                του κάθε χαρακτήρα στο αρχείο binary.txt. Η ανάγνωση του δέντρου 
+                γίνεται με την αναδρομική ρουτίνα writenode.</p>
+              
+            <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement">procedure writetree(list:Nodeptr);<br>
+                    begin
+                    <p>Assign(g, 'huffman.txt'); { exodos se arxeio }<br>
+                      rewrite(g);<br>
+                      Assign(h, 'binaries.txt'); { exodos se arxeio }<br>
+                      rewrite(h);</p>
+                    <p>writenode(list,0, 'root', ''); {klisi tis anadromikis writenode}<br>
+                      {pou diatrexei to dentro kai tupwnei to periexomeno tou}</p>
+                    <p>close(g); { kleisimo tou arxeiou }<br>
+                      close(h); { kleisimo tou arxeiou }<br>
+                      end;</p>
+                    
+                  </td>
+
+                </tr>
+              </table>
+              <br>
+              10. Ίσως η πιό μυστήρια ρουτίνα του προγράμματος, η writenode, είναι 
+              αναδρομική και κάνει μία preorder διαδρομή μέσα στο δέντρο. Καταγράφει 
+              κάθε στάση της στο αρχείο huffman και όσες στάσεις περιέχουν κάποιο 
+              χαρακτήρα στο binary.<br>
+              <br>
+              <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement">procedure writenode(list:Nodeptr;level:integer; 
+                    descr : string; binary:string);<br>
+                    begin 
+                    <p>if ((list^.left=nil) and (list^.right=nil)) then<br>
+                      writeln(h,list^.info,': ',binary);<br>
+                      writeln(g,level,' ',descr,' - ',list^.info,' - ',<br>
+                      list^.posibility:4:3);</p>
+                    <p>if list^.left&lt;&gt;nil then<br>
+
+                      writenode(list^.left,level+1, 'left', concat(binary,'0'));<br>
+                      <br>
+                      if list^.right&lt;&gt;nil then<br>
+                      writenode(list^.right,level+1, 'righ', concat(binary,'1'));<br>
+                      <br>
+                      end;</p>
+                  </td>
+                </tr>
+              </table>
+              <p><span lang=EL>Β.</span> Το<b> δεύτερο μέρος</b> (<a href="downloads/huffman2.p">download</a>) 
+                της άσκησης έχει μικρές διαφορές από το πρώτο. Κατ'αρχάς δεν μας 
+                συμφέρει πλέον η δομή του δέντρου. Για να βρείς έναν χαρακτήρα 
+                στο δέντρο και μετά να αντικαταστήσεις με τον κωδικό του, παίρνει 
+                πολλή ώρα. Γι'αυτό δημιουργούμε μία απλή λίστα (encode) που αντιστοιχίζει 
+                το κάθε γράμμα στον κωδικό του:</p>
+              
+            <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>type cell = record<br>
+                      info : char;<br>
+                      code : string;<br>
+                      end;<br>
+                      <br>
+                      codelist=array[1..maxtrees] of cell;</p>
+                    
+                  </td>
+                </tr>
+              </table>
+              <p>Η δημιουργία της λίστας γίνεται με την procedure createEncodeList 
+                η οποία είναι αναδρομική και μοιάζει με την writenode παραπάνω:<br>
+              </p>
+              
+            <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>procedure createEncodeList(list:nodePtr; binary:string);<br>
+                      begin<br>
+                      if list^.left&lt;&gt;nil then createEncodeList(list^.left,concat(binary,'0'));<br>
+                      if list^.right&lt;&gt;nil then createEncodeList(list^.right, 
+                      concat(binary,'1'));<br>
+                      if ((list^.right=nil) and (list^.left=nil)) then <br>
+                      begin<br>
+                      codeindex:=codeindex+1;<br>
+                      encode[codeindex].info:=list^.info;<br>
+                      encode[codeindex].code:=binary;<br>
+                      end;<br>
+                      end;</p>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              Στην συνέχεια μπορούμε πλέον να σβήσουμε το δέντρο για να μην πιάνει 
+              χώρο με την αναδρομική procedure deleteTree:<br>
+              <br>
+              <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>procedure deleteTree(list:Nodeptr);<br>
+                      begin<br>
+                      if list^.left&lt;&gt;nil then deleteTree(list^.left);<br>
+                      if list^.right&lt;&gt;nil then deleteTree(list^.right);<br>
+                      dispose(list);<br>
+                      end;</p>
+                  </td>
+                </tr>
+              </table>
+              <p>Και τώρα ήρθε πλέον η ώρα για την κωδικοποίηση και την αποκωδικοποίηση. 
+                Τι από τα δύο θα γίνει επιλέγεται από το κυρίως πρόγραμμα:</p>
+              
+            <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>begin</p>
+                    <p>initialize(list, n); { Arxikopoiisi }</p>
+                    <p>for i:=1 to n do rearrange(list,n,i); {arxiki taxinomisi 
+                      me tin me8odo bubblesort}</p>
+                    <p>for i:=1 to n-1 do { O algori8mos opws dinetai sto fulladio}<br>
+                      begin<br>
+                      merge_last(list,n,i);<br>
+                      rearrange(list,n,i);<br>
+                      end;</p>
+                    codeindex:=0;<br>
+                      createEncodeList(list[1],'');<br>
+                      deleteTree(list[1]);
+                    <table width="100%" border="1" cellspacing="0" bordercolor="#FF9900">
+                      <tr>
+                        <td class="TableElement">writeln; writeln('Huffman compressor');<br>
+                          writeln('Do you want : ');<br>
+                          writeln('1. To encode income.txt to outcome.txt or');<br>
+                          writeln('2. To decode outcome.txt to income.txt ?');<br>
+                          readln(choise);<br>
+                          if (choise=1) then encodeFile;<br>
+                          if (choise=2) then decodefile;</td>
+                      </tr>
+                    </table>
+
+
+                      end.
+                  </td>
+                </tr>
+              </table>
+              <br>
+              Η procedure encodeFile κωδικοποιεί το αρχείο. Συγκεκριμένα ανοίγει 
+              τα δύο αρχεία income και outcome, διαβάζει από το τελευταίο μία 
+              μία τις λέξεις και στέλνει κάθε χαρακτήρα στην procedure writecode2file. 
+              Αυτό γίνεται μέχρι να διαβαστούν όλες οι λέξεις από το αρχείο οπότε 
+              και εμφανίζονται τα στατιστικά, κλείνουν τα αρχεία και τερματίζει.<br>
+              <br>
+              <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>procedure encodeFile;<br>
+                      var word:string; incount,outcount:integer;<br>
+                      begin</p>
+                    <p>Assign(g,'income.txt'); Reset(g);<br>
+                      Assign(h,'outcome.txt');Rewrite(h);</p>
+                    <p>incount:=0;outcount:=0;</p>
+                    <p>while not Eof(g) do<br>
+                      begin<br>
+                      readln(g,word);<br>
+                      for i:=1 to length(word) do writecode2file(word[i],incount,outcount);<br>
+                      writecode2file('@',incount,outcount);<br>
+                      end;</p>
+                    <p>writeln(incount,' bits compressed to ',outcount,' bits');<br>
+                      writeln('Compression rate : ',(((incount-outcount) /incount)*100):2:0,'%');</p>
+                    <p>Close(g);Close(h);<br>
+                      end;</p>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              Η procedure writecode2file ψάχνει στον πίνακα με τους κωδικούς encode, 
+              τον κωδικό για κάθε χαρακτήρα ch που του δίνεται. Αν το βρεί, ο 
+              κωδικός γράφεται στο αρχείο outcome:<br>
+              <br>
+              <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>procedure writecode2file(ch:char; var incount,outcount:integer);<br>
+                      var codeindex:integer;<br>
+                      begin<br>
+                      for codeindex:=1 to n do<br>
+                      if encode[codeindex].info=upcase(ch) then<br>
+                      begin<br>
+                      incount:=incount+8; writeln(h,encode[codeindex].code);<br>
+                      outcount:=outcount+length(encode[codeindex].code);<br>
+                      end;<br>
+                      end;</p>
+                    </td>
+                </tr>
+              </table>
+              <br>
+              Τέλος η procedure decodeFile αποκωδικοποιεί το αρχείο outcome κάνωντας 
+              την ανάποδη διαδικασία:<br>
+              <br>
+              <table width="500" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableElement"> 
+                    <p>procedure decodeFile;<br>
+                      var word:string; incount,outcount:integer;<br>
+                      begin</p>
+                    <p>incount:=0;outcount:=0;<br>
+                      Assign(g,'income.txt'); Rewrite(g);<br>
+                      Assign(h,'outcome.txt'); Reset(h);</p>
+                    <p>while not eof(h) do<br>
+                      begin<br>
+                      readln(h,word);<br>
+                      for codeindex:=1 to n do <br>
+                      if (word=encode[codeindex].code) then<br>
+                      begin<br>
+                      if (encode[codeindex].info='@') then writeln(g,'') else<br>
+                      write(g,encode[codeindex].info);<br>
+                      outcount:=outcount+8; incount:=incount+length(word);<br>
+                      end;</p>
+                    <p>end;</p>
+                    <p>writeln(incount,' bits uncompressed successfully to ',outcount,' 
+                      bits');<br>
+                      writeln('Compression rate : ',(((outcount-incount) /outcount)*100):2:0,'%');</p>
+                    <p>Close(g);Close(h);<br>
+                      end;</p>
+                  </td>
+                </tr>
+              </table>
+              <p><br>
+                *Ο χαρακτήρας @ χρησιμοποιείται καταχρηστικά ως χαρακτήρας αλλαγής 
+                γραμμής.<br>
+                ** Τα αποτελέσματα είναι πολύ καλά και για συνήθες αγγλικό κείμενο 
+                η συμπίεση είναι περίπου 50%! (παράδειγμα <a href="downloads/income.txt">εισόδου</a> 
+                και <a href="downloads/outcom

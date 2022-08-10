@@ -1,0 +1,233 @@
+<html><!-- #BeginTemplate "/Templates/maintemplate.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/lasertrigger/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:40:58 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Laser trigger</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "meta tags" -->
+<meta name="description" content="Κύκλωμα συγχρονισμού κάμερας με laser / Camera and laser synchronization circuit">
+<meta name="keywords" content="trigger laser pulse delay σκανδαλισμος camera συγχρονισμος synchronize">
+<!-- #EndEditable -->
+<meta name="keywords" content="temfe τεμφε semfe - σεμφε electronics ηλεκτρονικά programming flash c  pascal music drum n bass hardware assembly ασκηση εργαστηριο">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<SCRIPT LANGUAGE="javascript" src="../../scripts.js"></script>
+<link rel="stylesheet" href="../../mystyles.css" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000" background="../../rootfiles/marble.jpg" leftmargin="0" marginwidth="0" marginheight="0" topmargin="25">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="176" height="1"><img src="../../rootfiles/spacer.gif" width="176" height="1" border="0"></td>
+    <td width="313" height="1"><img src="../../rootfiles/spacer.gif" width="313" height="1" border="0"></td>
+    <td width="233" height="1"><img src="../../rootfiles/spacer.gif" width="233" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+  </tr>
+  <tr> 
+    <td  height="24" colspan="3"><img src="../../rootfiles/templateUp185.gif" width="185" height="24"></td>
+    <td height="24" background="../../rootfiles/templateUpMiddle.gif"></td>
+    <td height="24" colspan="3"><img src="../../rootfiles/templateUp242.gif" width="242" height="24"></td>
+  </tr>
+  <tr> 
+    <td height="5" background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td height="5" background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td colspan="3" bgcolor="#FFFFFF"> <!-- #BeginEditable "contains" --> 
+        <SCRIPT language="">
+UpdateTitlebar("<a href=\"electronics/index.htm\" target=\"mainFrame\"><img src=\"bar/electronics.gif\" border=0></a><a href=\"electronics/lasertrigger/index.htm\" target=\"mainFrame\"><img src=\"bar/lastrigger.gif\" border=0></a>","<font face='Verdana, Arial, Helvetica, sans-serif'>Laser trigger</font>")
+</script>
+        <table width="720" border="0" cellspacing="0" cellpadding="5">
+          <tr> 
+            <td valign="top" height="54" class="Title"> Laser trigger</td>
+          </tr>
+          <tr> 
+            <td valign="top" class="My_Text"> 
+              <p><img src="../images/prototype2.gif" width="200" height="129" align="left">Το 
+                δεύτερο κύκλωμα με μικροελεγκτή. Ένα παλμικό laser έχει ανάγκη 
+                από ένα περιοδικό παλμό σκανδαλισμού ο οποίος ανάβει μία λυχνία 
+                όμοια με αυτή του flash και δημιουργεί την ακτίνα laser. Για την 
+                μελέτη αυτών των ακτινών χρησιμοποιούνται κάποιες (αναίσθητες) 
+                κάμερες που καταγράφουν την μορφή της ακτίνας και την αποθηκεύουν 
+                σε ένα PC. Η κάμερα αυτή χρειάζεται επίσης ένα σήμα σκανδαλισμού 
+                (trigger) το οποίο θα σηματοδοτεί το πότε πρέπει η κάμερα να πάρει 
+                την εικόνα της δέσμης. Πιθανότατα η όλη διάταξη να ελέγχεται και 
+                αυτή μέσω Η/Υ.</p>
+              <p>Για τον έλεγχο της όλης διάταξης χρειάζεται η παρακάτω ακολουθία 
+                παλμών: </p>
+              
+            <table width="494" border="1" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                  <td><img src="triger.gif" width="494" height="360"></td>
+                </tr>
+                <tr> 
+                  <td class="My_Text">
+                    <div align="center">Σχ.1 Οι ζητούμενοι παλμοί εξόδου</div>
+                    </td>
+                </tr>
+              </table>
+              <p>Παρατηρούμε τον πρώτο παλμό ό οποίος σκανδαλίζει το laser και 
+                ο δεύτερος ο οποίος ενεργοποιεί την camera. Το πλάτος και των 
+                δύο παλμών είναι 1mS ενώ η καθυστέρηση του ενός απ'τον άλλο πρέπει 
+                να μεταβάλλεται από 20 - 999μS. Η όλη αυτή ακολουθία θα πρέπει 
+                να αρχίζει είτε όταν δίνεται ένα σήμα triger από τον υπολογιστή, 
+                είτε περιοδικά με μεταβλητή περίοδο από 3 - 999mS.</p>
+              <p>Η χρήση του μικροελεγκτή διευκολύνει την χρήση κάνωντας την βάση 
+                χρόνου μας πιό σταθερή, την ένδειξη πιό ευανάγνωστη και την όλη 
+                κατασκευή συμπαγή, με χαμηλή κατανάλωση ρεύματος. Φυσικά στην 
+                θέση του μικροελεγκτή δεν θα μπορούσε να είναι άλλος παρά ο γνωστός 
+                AT90S2313. Στην αρχή ο μικροελεγκτής έτρεχε στα 8MHz ενώ στην 
+                τελική κατασκευή η συχνότητα αυτή μειώθηκε στα 4MHz χωρίς πρόβλημα.</p>
+              <p>Όλοι οι χρόνοι που μεταβάλλονται εμφανίζονται σε τρία display 
+                7 στοιχείων και αυξομειώνονται εύκολα με τη χρήση 4 button.</p>
+              <p>Επειδή τα ποδαράκια του AT90S2313 είναι περιορισμένα χρησιμοποίησα 
+                για την οδήγηση των display το 4511, ένα αποκοδηκοποιητή από BCD 
+                σε 7-Segment. Με αυτόν τον τρόπο τα απαιτούμενα για τα display, 
+                pins περιορίστηκαν από 11 σε 8, μια σημαντική βελτίωση. Περιττό 
+                να προσθέσω ότι τα τρία displays πολυπλέκονται (δηλαδή συνδέονται 
+                παράλληλα με τέτοιο τρόπο ώστε να ανανεώνεται το ένα μετά το άλλο 
+                στη σειρά σε μια ταχύτητα που να μην γίνεται ορατό το τρεμόπαιγμα). 
+                Το θεωρητικό διάγραμμα φαίνεται στο σχήμα 2.</p>
+              
+            <table width="550" border="1" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                  <td><img src="trigerschem.gif" width="684" height="672"></td>
+                </tr>
+                <tr>
+                  <td class="My_Text">
+                    <div align="center">Σχ.2 Το (όχι και τόσο μικρό) θεωρητικό 
+                      κύκλωμα</div>
+                  </td>
+                </tr>
+              </table>
+              <p>&nbsp;</p>
+              Το κύκλωμα δεν παρουσιάζει καμία ιδιαιτερότητα. Το trigger από το 
+              computer εφαρμόζεται στον συνδετήρα J2, ο πρώτος παλμός, για το 
+              laser εμφανίζεται στο PD0 και ο δεύτερος, για την κάμερα στο PD1, 
+              τα οποία εξάγονται από τον συνδετήρα J3. Τέλος η τροφοδοσία παρέχεται 
+              στον συνδετήρα J1. Αυτή μπορεί να μεταβάλεται χωρίς πρόβλημα από 
+              2,7 εως 6,6V (τυπικά) αλλά για να φωτίζουν επαρκώς τα Led καλό είναι 
+              να είναι πάνω από 4,5V. 
+              <p><br>
+              </p>
+              
+            <table border="1" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                  <td> 
+                    <p><a href="trigerpcb.pdf"><img src="pcb.gif" width="390" height="323" border="0"><br>
+                      <br>
+                      </a><img src="place.gif" width="391" height="324"></p>
+                    </td>
+                </tr>
+                <tr> 
+                  <td class="My_Text"> 
+                    <div align="center"> 
+                      <p><a href="../index.html#orcad"><img src="../images/powered.gif" width="97" height="35" align="right" border="0"></a>Σχ.3 
+                        Η πλακέτα (κλικ για pdf) και<br>
+                        η τοποθέτηση των εξαρτημάτων</p>
+                      </div>
+                  </td>
+                </tr>
+              </table>
+              <p>Η πλακέτα είναι πυκνή και γι'αυτό χρειάζεται κάποια προσοχή. 
+                Οι διαστάσεις της είναι 5χ6 cm και η τοποθέτηση των εξαρτημάτων 
+                γίνεται όπως φαίνεται στο δεύτερο μέρος του σχήματος 3. Προσοχή 
+                μην ξεχάσετε τα 11 Jumperακια τα οποία φαίνονται με κόκκινο στο 
+                σχήμα.</p>
+              <p>Και όπως κάθε μικροεπεξεργαστής, και αυτός για να λειτουργήσει 
+                χρειάζεται να εκτελεί ένα πρόγραμμα το οποίο για μία ακόμα φορά 
+                είναι γραμμένο σε assembly. Ενδιαφέρον παρουσιάζει η ρουτίνα που 
+                διαιρεί με το 10 (DivideWith10) μιας και χειρίζεται 16-bitες και 
+                8-bitες μεταβλητές και έχουν γίνει προσπάθειες για να είναι όσο 
+                το δυνατόν γρήγορη και να χρησιμοποιεί λίγους καταχωρητές. [<a href="trigger.asm">Πρόγραμμα 
+                σε asm</a>]</p>
+              
+            <p><img src="../images/star.gif" width="15" height="16">Το παραπάνω 
+              πρόγραμμα χάθηκε μαζί με ένα ολόκληρο partition κατά την πρώτη εγκατάσταση 
+              του Linux. Παρέμεινε όμως φορτωμένο στην Flash του μικροεπεξεργαστή 
+              με τον οποίο πειραματιζόμουν. Το τι επακολούθησε για να το ανακτήσω 
+              μπορείτε να δείτε εδώ: [<a href="../disassembly/index.html">Disassembly</a>] 
+            </p>
+            <table width="300" border="1" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                <td><img src="delay_pic.jpg" width="300" height="146"></td>
+              </tr>
+              <tr> 
+                <td class="My_Text"> <div align="center">Σχ.4 Η κατασκευή</div></td>
+              </tr>
+            </table>
+              
+            <p>Στο σχήμα 4 βλέπουμε μία εικόνα της κατασκευής. Στα δεξιά ξεχωρίζουν 
+              οι δύο BNC έξοδοι με τα σήματα συγχρονισμού για το laser και την 
+              camera ενώ στα αριστερά βλέπουμε την BNC είσοδο του προαιρετικού 
+              σήματος σκανδαλισμού π.χ. από κάποιο PC και το βύσμα τροφοδοσίας. 
+              Η ρύθμιση των παραμέτρων (frequency - delay - trigger mode) είναι 
+              πολύ εύκολη με την βοήθεια των τεσσάρων κουμπιών, των τριών Led 
+              - ένα για κάθε παράμετρο και των τριών display που εμφανίζουν την 
+              τιμή της παραμέτρου.</p></td>
+          </tr>
+          <tr> 
+            <td valign="top" class="My_Text"> 
+              <script language="JavaScript" src="../relative.js">
+</script>
+            </td>
+          </tr>
+        </table>
+  <!-- #EndEditable --></td>
+    <td bgcolor="#FFFFFF"></td>
+    <td background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td height="25" colspan="3" valign="bottom" background="../../rootfiles/templateDown185.gif"> 
+      <table width="100" height="25" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="3" colspan="2"></td>
+        </tr>
+        <tr> 
+          <td width="10"></td>
+          <td valign="middle"><a href="../../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"><img src="../../rootfiles/ihome.gif" width="13" height="13" border="0" alt="Home"></a>&nbsp;<a href="../index.html" onMouseOver="MM_displayStatusMsg('Electronics');return document.MM_returnValue"><img src="../../rootfiles/ielect.gif" width="13" height="13" border="0" alt="Electronics"></a><a href="../../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"></a>&nbsp;<a href="../../programming/index.html" onMouseOver="MM_displayStatusMsg('Programming');return document.MM_returnValue"><img src="../../rootfiles/iprog.gif" width="13" height="13" border="0" alt="Programming"></a>&nbsp;<a href="../../mydocuments/index.html" onMouseOver="MM_displayStatusMsg('My documents');return document.MM_returnValue"><img src="../../rootfiles/imydoc.gif" width="13" height="13" border="0" alt="My documents"></a>&nbsp;<a href="../../find/index.html" onMouseOver="MM_displayStatusMsg('Find');return document.MM_returnValue"><img src="../../rootfiles/ihelp.gif" width="13" height="13" border="0" alt="Find"></a></td>
+        </tr>
+      </table></td>
+    <td height="25" background="../../rootfiles/templateDownMiddle.gif"></td>
+    <td height="25" colspan="3"><img src="../../rootfiles/templateDown242.gif" width="242" height="25"></td>
+  </tr>
+</table>
+<br>
+<table width="740" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td><font size="1" style="text-align: justify;">Οι κατασκευές, τα προγράμματα 
+        και όλο το περιεχόμενο του site ανήκουν σε εμένα προσωπικά, όσο αυτό δεν 
+        παραβιάζει δικαιώματα άλλων και δημοσιεύονται για ενημερωτικούς σκοπούς. 
+        Καμία εγγύηση δεν παρέχεται για οποιαδήποτε χρήση τους και καμία ευθύνη 
+        δε φέρω για οποιεσδήποτε ζημιές μπορεί να προκαλέσουν. Για επαγγελματική 
+        χρήση ή αναδημοσίευση μέρους ή του συνόλου του περιεχομένου του site, 
+        επικοινωνήστε μαζί μου.</font><br /><br />
+        <center><font size="1">Δημήτρης Κουζής - Λουκάς | (c) 2001-2004 | Dimitris Kouzis 
+          - Loukas</font></center>
+	</td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/lasertrigger/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:41:06 GMT -->
+</html>

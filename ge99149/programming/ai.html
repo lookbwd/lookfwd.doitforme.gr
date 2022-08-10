@@ -1,0 +1,407 @@
+<html><!-- #BeginTemplate "/Templates/maintemplate.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/programming/ai.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:37:47 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>AI++</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "meta tags" -->
+<meta name="description" content="Artificial intelligence - Genetic algorithm and simulating annealing Τεχνιτή νουμοσύνη - Γενετικοί αλγόριθμοι  και  simulating annealing">
+<meta name="keywords" content="artificial intelligence τεχνιτη νουμοσυνη genetic algorithm simulating annealing java evolution γενετικοι αλγοριθμοι εξελιξη δαρβινος">
+<!-- #EndEditable -->
+<meta name="keywords" content="temfe τεμφε semfe - σεμφε electronics ηλεκτρονικά programming flash c  pascal music drum n bass hardware assembly ασκηση εργαστηριο">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<SCRIPT LANGUAGE="javascript" src="../scripts.js"></script>
+<link rel="stylesheet" href="../mystyles.css" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000" background="../rootfiles/marble.jpg" leftmargin="0" marginwidth="0" marginheight="0" topmargin="25">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="4" height="1"><img src="../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="176" height="1"><img src="../rootfiles/spacer.gif" width="176" height="1" border="0"></td>
+    <td width="313" height="1"><img src="../rootfiles/spacer.gif" width="313" height="1" border="0"></td>
+    <td width="233" height="1"><img src="../rootfiles/spacer.gif" width="233" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="4" height="1"><img src="../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+  </tr>
+  <tr> 
+    <td  height="24" colspan="3"><img src="../rootfiles/templateUp185.gif" width="185" height="24"></td>
+    <td height="24" background="../rootfiles/templateUpMiddle.gif"></td>
+    <td height="24" colspan="3"><img src="../rootfiles/templateUp242.gif" width="242" height="24"></td>
+  </tr>
+  <tr> 
+    <td height="5" background="../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td height="5" background="../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../rootfiles/templateLeft.gif"></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td colspan="3" bgcolor="#FFFFFF"> <!-- #BeginEditable "contains" -->
+        <table width="720" border="0" cellspacing="0" cellpadding="5">
+          <tr>
+            <td class="Title">
+              <script language="">
+UpdateTitlebar("<a href=\"programming/index.htm\" target=\"mainFrame\"><img src=\"bar/program.gif\" border=0></a>","<font face='Verdana, Arial, Helvetica, sans-serif'>Τεχνητή νοημοσύνη</font>")
+</script>
+            Τεχνητή νοημοσύνη (AI)</td>
+          </tr>
+          <tr>
+            <td class="My_Text"> 
+                   
+              <table width="710" border="1" cellspacing="0" cellpadding="5">
+              <tr> 
+                  <td class="TableTitle" height="34">Εισαγωγή</td>
+                </tr>
+                <tr> 
+                  <td class="My_Text"> 
+                    <p>Υπάρχουν πολλές τεχνικές που χρησιμοποιούνται στην τεχνητή 
+                      νοημοσύνη. Εγώ εξετάζω κυρίως αυτές που αφορούν την εύρεση 
+                      της βέλτιστης λύσης σε διάφορα προβλήματα. Στην αναζήτηση 
+                      αυτή ψάχνεις μέσα σε ένα χώρο λύσεων π.χ. [Δευτέρα ... Κυριακή, 
+                      7:00 - 19:00] για την βελτιστη λύση του προβλήματος που 
+                      στη συγκεκριμένη περίπτωση είναι το &quot;πότε θα πάω στο 
+                      ΕΜΠ?&quot;. Αν φανταστεί κανείς μία συνάρτηση (merit function) 
+                      που υπολογίζει την ευχαρίστηση του να πάω στο ΕΜΠ συναρτήσει 
+                      της μέρας και της ώρας μπορεί να χρησιμοποιήσει τεχνικές 
+                      hill-climbing για να βρεί την βέλτιστη ώρα και μέρα. Αυτή 
+                      μπορεί να είναι μια απόφαση που παίρνουμε καθημερινά εμείς 
+                      οι άνθρωποι, όμως μόνο και η λέξη &quot;απόφαση&quot; είναι 
+                      ικανή να φέρει αλεργία σε κάθε PC. Γενικά τα μηχανήματα 
+                      δεν αρέσκονται στο να παίρνουν αποφάσεις, πόσο μάλλον και 
+                      σε τέτοιες ασαφείς περιστάσεις.</p>
+                    
+                  <p><img src="images/kangar.gif" width="400" height="470" align="left">Μία 
+                    παραστατική μεταφορά για την αναζήτηση τύπου hill-climbing 
+                    είναι αυτή ενός καγκουρό στην ομίχλη. Υποθέστε ότι είστε ένα 
+                    καγκουρό και βρεθήκατε σε ένα άγνωστο βουνό που είναι τυλιγμένο 
+                    με πυκνό καπνό και θέλετε να βρείτε την ψηλότερη κορυφή (εικόνα 
+                    a). Το μόνο που μπορείτε να κάνετε λόγω της περιορισμένης 
+                    ορατότητάς σας, είναι να δείτε το ψηλότερο σημείο τριγύρω 
+                    στην περιοχή σας και να πηδήξετε σε αυτό. Από τη νέα σας θέση 
+                    τώρα επαναλαμβάνετε την προηγούμενη διαδικασία μέχρι να φτάσετε 
+                    σε ένα σημείο που δεν υπάρχει τριγύρω ψηλότερο. Φυσικά, τίποτα 
+                    δεν εγγυάται ότι φτάσατε στο ψηλότερο σημείο της περιοχής 
+                    χρησιμοποιώντας αυτή τη μέθοδο. Το αν θα φτάσετε ή όχι εξαρτάται 
+                    αποκλειστικά από την μορφή του βουνού που θα βρεθείτε. Αν 
+                    το έδαφος είναι ομαλό, υπάρχει μόνο ένα μέγιστο και η κλίση 
+                    σε κάθε σημείο του εδάφους δείχνει προς αυτό το μέγιστο θα 
+                    βρείτε την ψηλότερη κορυφή (εικόνα b).</p>
+                    <p>Ίσως πράγματι να είναι έτσι, παρ'όλα αυτά αν το έδαφος 
+                      έχει μικρούς λοφίσκους θα βρείτε μια κορυφή αλλά το πιθανότερο 
+                      είναι να μην είναι η ψηλότερη. (εικόνα c). Αναλόγως με το 
+                      τι ζητάμε, αυτό μπορεί να μην είναι πρόβλημα αφού και πάλι 
+                      έχουμε φτάσει σε ένα βέλτιστο, έστω και τοπικό. Από την 
+                      άλλη αν το έδαφος είναι γεμάτο με πέτρες και απότομες κορυφές 
+                      το πιθανότερο είναι ότι θα κολλήσετε σε ένα τοπικό μέγιστο 
+                      το οποίο θα απέχει πάρα πολύ από το ολικό το οποίο επιθυμούμε 
+                      (εικόνα d).</p>
+                    <p>Η χειρότερη όμως περίπτωση είναι όταν το έδαφος δεν έχει 
+                      καθόλου κλίση. Σε αυτή τη περίπτωση υπάρχουν μεμονωμένες 
+                      κορυφές και πηδώντας τυχαία προς κάθε κατεύθυνση είναι σχεδόν 
+                      απίθανο να βρεθείς εκεί από τύχη (εικόνα e). Μία άλλη λύση 
+
+                      στους αλγόριθμους ανεύρεσης είναι αυτή που φαίνεται στην 
+                      εικόνα f. Αυτή είναι μία μορφή παράλληλης αναζήτησης (γενετικοί 
+                      αλγόριθμοι) όπου πολλά καγκουρό εξερευνούν τον χώρο και 
+                      η πιθανότητα να φτάσουν στο υψηλότερο σημείο του χώρου αναζήτησης 
+                      είναι πολύ μεγαλύτερη.</p>
+                    <p>Από τα παραπάνω παραδείγματα γίνεται φανερό ότι είναι πολύ 
+                      σημαντικό να ξέρεις το πόσο σύνθετος είναι ο χώρος αναζήτησης 
+                      πριν αρχίσεις να σχεδιάζεις έναν αλγόριθμο τεχνητής νοημοσύνης. 
+                      Παρ'όλα αυτά είναι φανερό ότι οι δυνατότητες περιορίζονται 
+                      από τον ίδιο τον χώρο αναζήτησης. Για παράδειγμα στην κρυπτογραφία, 
+                      ο σκοπός είναι να βρεθεί ένας τρόπος ώστε το μήνυμα να κωδικοποιείται 
+                      σε ένα χώρο τόσο σύνθετο ώστε να μην μπορεί κανείς να το 
+                      αποκωδικοποιήσει χωρίς πλήρη γνώση του χώρου ούτε εμπειρικά, 
+                      πόσο μάλλον με κάποιο αλγόριθμο αναγνώρισης προτύπων.</p>
+                    
+                  <p align="right"><a href="#reference1">Από το βιβλίο data minning 
+                    του Pieter Adriaans</a></p>
+                  </td>
+                </tr>
+              </table>
+              <p class="SubTitle">&nbsp;</p>
+              <p class="SubTitle">Γενετικοί αλγόριθμοι</p>
+              <p>Είναι αλγόριθμοι ανεξάρτητοι του προβλήματος (problem independent) 
+                που αποσκοπούν στον προσδιορισμό μίας πολύ καλής λύσης (near to 
+                optimal) του προβλήματος που τους τίθεται. Όλοι οι γενετικοί αλγόριθμοι 
+                έχουν την (σχετικά απλή) δομή του παρακάτω διαγράμματος. Η διαφοροποίηση 
+                τους έγκειται στην υλοποίησή του όπως και στην πιθανή εφαρμογή 
+                πρόσθετων operations που βελτιώνουν την επίδοσή τους σε συγκεκριμένα 
+                προβλήματα. Πάντως ο βασικός αλγόριθμος δουλεύει πάντα και δίνει 
+                πολύ καλά αποτελέσματα.</p>
+              
+            <table width="400" border="1" cellspacing="0" cellpadding="0" align="center">
+              <tr>
+                  <td><img src="images/gas.gif" width="541" height="458"></td>
+                </tr>
+              </table>
+              
+              <p>&nbsp;</p>
+              
+            <table border="1" cellspacing="0" cellpadding="5" align="center" width="80%">
+              <tr> 
+                  <td class="TableTitle">Links</td>
+                </tr>
+                <tr> 
+                  <td class="My_Text">ΤΟ site: <a href="http://cs.felk.cvut.cz/~xobitko/ga/" target="_blank">Introduction 
+                    to genetic algorithms with Java applets</a><br>
+                    Γενετικοί αλγόριθμοι σε java (<a href="ftp://laseeb.ist.utl.pt/pub/download/jdeal/">download</a>) 
+                    (<a href="http://laseeb.ist.utl.pt/sw/jdeal/">site</a>)<br>
+                    Καλό site από έναν καθηγητή του εξωτερικού (<a href="http://ls11-www.informatik.uni-dortmund.de/people/baeck/">site</a>)<br>
+                    <a href="http://www.cs.bham.ac.uk/Mirrors/ftp.de.uu.net/EC/clife/">The 
+                    hitch-hiker's guide to evolutionary computation</a><br>
+                    <a href="http://www.aic.nrl.navy.mil/galist/">Much download 
+                    here!<br>
+                    </a><a href="http://www.ing.unlp.edu.ar/cetad/mos/memetic_home.html">Memetic 
+                    Algorithms' Home Page</a><br>
+                    <a href="http://www.geneticprogramming.com/">The Genetic Programming 
+                    Tutorial</a><br>
+                    <a href="http://lancet.mit.edu/ga/OtherSites.html">Nice little 
+                    links</a><br>
+                    <a href="ftp://lancet.mit.edu/pub/ga">GLIB in ftp server</a></td>
+                </tr>
+              </table>
+              <p><br>
+              </p>
+              <p class="SubTitle">Simulating annealing</p>
+              <table width="710" border="0" cellspacing="0" cellpadding="0">
+                <tr> 
+                  <td width="406" valign="top"> 
+                    <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                      <tr>
+                        <td class="My_Text"> 
+                          <p>Ένας ανάλογος τρόπος εύρεσης της βέλτιστης λύσης 
+                            είναι και αυτός του simulating annealing. Στηρίζεται 
+                            στην ομοιότητα της σκλήρυνσης ενός μετάλου με θέρμανση 
+                            (annealing) με την στατιστική μέθοδο προσδιορισμού 
+                            ελαχίστου. Συγκεκριμένα όταν ζεσταίνουμε ένα μέταλο 
+                            υπάρχουν πολλά άτομα με μεγάλη ενέργεια. Αν το ψύξουμε 
+                            αργά αργά, τη στιγμή που θα στερεοποιηθεί θα έχει 
+                            την ελάχιστη ενέργεια (global minimum).</p>
+                          <p>Αυτή είναι η αρχή λειτουργίας και ο γενικός αλγόριθμος 
+                            που χρησιμοποιείται φαίνεται στο διάγραμμα δεξιά.</p>
+                          <p align="left">&nbsp;</p>
+                          <p align="left"><a href="http://www.lionhrtpub.com/orms/orms-12-98/schineller.html">Manageroδουλειές</a></p>
+                          <p><a href="http://plato.stanford.edu/contents.html">Ψιλό-άσχετο, 
+                            η βιβλιοθήκη φιλοσοφίας του Stanford!</a></p>
+              </td>
+                      </tr>
+                    </table>
+                  </td>
+                  <td align="right" width="304"> 
+                    <table border="1" cellspacing="0" cellpadding="0" width="304">
+                    <tr> 
+                        <td width="302"><img src="images/sa.gif" width="300" height="468"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              <p class="SubTitle">Βιβλία</p>
+              
+            <table width="80%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableTitle">Pattern - Image Recognition</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement"> 
+                    <ol>
+                      <li>Pattern Matching Algorithms<br>
+                        Alberto Apostolico, Zvi Galil (Το πιο συχνά εμφανιζόμενο 
+                        πρόβλημα είναι αυτό του να βρεις κάποια ονόματα μέσα σε 
+                        ένα κείμενο ή όλα τα σχετικά προβλήματα που ακούνε στο 
+                        όνομα προβλήματα αναγνώρισης προτύπων. Θα εκπλαγείτε από 
+                        το πόσες πολλές και απίθανα αποδοτικές λύσεις υπάρχουν) 
+                        <font size="1">[006.4 PAT]</font> </li>
+                      <li> Three Dimensional Computer Vision<br>
+                        Yoshiaki Shirai (Ένα βιβλίο με πρακτικές λύσεις στον τομέα 
+                        της αναγνώρισης εικόνας. Απλά μαθηματικά και ιδέες που 
+                        δουλεύουν εύκολα στη πράξη) <font size="1">[006.42 SHI]</font> 
+                      </li>
+                      <li>Digital Image Processing<br>
+                        Rafael C. Gonzalez / Richard E. Woods <font size="1">[621.367 
+                        GON]</font></li>
+                    </ol>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              <table width="80%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableTitle">Προβλήματα και μέθοδοι βελτιστοποίησης</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement"> 
+                    <ol>
+                      <li>Intelligent Optimisation Techniques<br>
+                        D.T.Pham, D. Karaboga (γενετικοί αλγόριθμοι, tabu search, 
+                        simulatin annealing και neural networks όλα σε ένα με 
+                        συγκριτικά μεταξύ τους)</li>
+                      <li>Classical Principles and Optimization Problems<br>
+                        Boris Sergeevich Razumikhin (Πολύ πράγμα... με αρκετά 
+                        μαθηματικά)</li>
+                    </ol>
+                    </td>
+                </tr>
+              </table>
+              <br>
+              <table width="80%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableTitle">Γενετικοί αλγόριθμοι</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement"> 
+                    <ol>
+                      <li>Genetic Algorithms and data structures = evolution programs<br>
+                        Zbigniew Michalewicz (πολύ καλό)</li>
+                      <li>Genetic Algorithms<br>
+                        (in search optimization &amp; machine learning)<br>
+                        David E.Goldberg (με έτοιμα παραδείγματα σε Pascal)</li>
+                    </ol>
+                    <div align="center"><img src="images/gainsearch.jpg" width="113" height="140"></div>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              <table width="80%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableTitle">Simulating annealing</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement"> 
+                    <ol>
+                      <li>Simulated Annealing: Theory and Applications<br>
+                        J.P.M. van Laarhoven and E.H.L. Aarts <font size="1">[511 
+                        LAA]</font></li>
+                    </ol>
+                    <div align="center"><img src="images/sata.gif" width="147" height="222"></div>
+                  </td>
+                </tr>
+              </table><a name="reference1"></a>
+              <br>
+              <table width="80%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableTitle">Τεχνητή νοημοσύνη στις επιχειρήσεις και 
+                    το management</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement"> 
+                    <ol>
+                      <li>Seven Methods for Transforming Corporate Data Into Business 
+                        Intelligence<br>
+                        Vasant Dhar, Roger Stein (σου φέρνει απίστευτη έμπνευση)</li>
+                      <li>Data Mining<br>
+                        Pieter Adriaans and Dolf Zantinge <font size="1">[ΠΒ 001.422 
+                        ADR]</font></li>
+                    </ol>
+                    <div align="center">
+                      <p><img src="images/aibusiness.jpg" width="114" height="147"></p>                    
+                      <p><img src="images/dm.gif" width="147" height="213"></p>
+                    </div>
+                      
+                    </td>
+                </tr>
+              </table>
+              <br>
+              <table width="80%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableTitle">Μία εκπληκτική υπόθεση</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement"> 
+                    <ol>
+                      <li>Μία εκπληκτική επιστημονική υπόθεση για το πως πραγματικά 
+                        λειτουργεί ο εγκέφαλος και τι είναι αυτό που λέμε συνείδηση.<br>
+                        Francis Crick (κυκλοφορεί μεταφρασμένο στα ελληνικά από 
+                        τις εκδόσεις κάτοπτρο)<font size="1"> [153 CRI]</font></li>
+                    </ol>
+                    </td>
+                </tr>
+              </table>
+              <br>
+              <table width="80%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="TableTitle">Σχεδίαση μοντέλων</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement"> 
+                    <ol>
+                      <li>The Unified Modeling Language User Guide<br>
+                        Grady Booch, James Rumbaugh, Ivar Jacobson <font size="1">[ΠΒ 
+                        005.17]</font><br>
+                        Πραγματικά το καλύτερο βιβλίο για UML</li>
+                    </ol>
+                    <p align="center"><img src="images/UML_Book_1.jpg" width="200" height="268"></p>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              <br>
+              <table border="0" cellspacing="0" cellpadding="3" align="right">
+                <tr class="StampProperty"> 
+                  <td>Αγόρασέ το από το Amazon<br>
+                    <a href="http://www.amazon.com/" target="_blank"><img src="images/amazon.gif" width="148" height="43" border="0"></a></td>
+                  <td><a href="http://www.lib.ntua.gr/" target="_blank"><img src="images/library.jpg" width="148" height="43" border="0"></a><br>
+                    Βρες το στη βιβλιοθήκη</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- #EndEditable --></td>
+    <td bgcolor="#FFFFFF"></td>
+    <td background="../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td background="../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td height="25" colspan="3" valign="bottom" background="../rootfiles/templateDown185.gif"> 
+      <table width="100" height="25" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="3" colspan="2"></td>
+        </tr>
+        <tr> 
+          <td width="10"></td>
+          <td valign="middle"><a href="../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"><img src="../rootfiles/ihome.gif" width="13" height="13" border="0" alt="Home"></a>&nbsp;<a href="../electronics/index.html" onMouseOver="MM_displayStatusMsg('Electronics');return document.MM_returnValue"><img src="../rootfiles/ielect.gif" width="13" height="13" border="0" alt="Electronics"></a><a href="../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"></a>&nbsp;<a href="index.html" onMouseOver="MM_displayStatusMsg('Programming');return document.MM_returnValue"><img src="../rootfiles/iprog.gif" width="13" height="13" border="0" alt="Programming"></a>&nbsp;<a href="../mydocuments/index.html" onMouseOver="MM_displayStatusMsg('My documents');return document.MM_returnValue"><img src="../rootfiles/imydoc.gif" width="13" height="13" border="0" alt="My documents"></a>&nbsp;<a href="../find/index.html" onMouseOver="MM_displayStatusMsg('Find');return document.MM_returnValue"><img src="../rootfiles/ihelp.gif" width="13" height="13" border="0" alt="Find"></a></td>
+        </tr>
+      </table></td>
+    <td height="25" background="../rootfiles/templateDownMiddle.gif"></td>
+    <td height="25" colspan="3"><img src="../rootfiles/templateDown242.gif" width="242" height="25"></td>
+  </tr>
+</table>
+<br>
+<table width="740" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td><font size="1" style="text-align: justify;">Οι κατασκευές, τα προγράμματα 
+        και όλο το περιεχόμενο του site ανήκουν σε εμένα προσωπικά, όσο αυτό δεν 
+        παραβιάζει δικαιώματα άλλων και δημοσιεύονται για ενημερωτικούς σκοπούς. 
+        Καμία εγγύηση δεν παρέχεται για οποιαδήποτε χρήση τους και καμία ευθύνη 
+        δε φέρω για οποιεσδήποτε ζημιές μπορεί να προκαλέσουν. Για επαγγελματική 
+        χρήση ή αναδημοσίευση μέρους ή του συνόλου του περιεχομένου του site, 
+        επικοινωνήστε μαζί μου.</font><br /><br />
+        <center><font size="1">Δημήτρης Κουζής - Λουκάς | (c) 2001-2004 | Dimitris Kouzis 
+          - Loukas</font></center>
+	</td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/programming/ai.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:37:57 GMT -->
+</html>

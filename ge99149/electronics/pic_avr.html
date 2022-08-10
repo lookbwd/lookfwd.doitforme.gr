@@ -1,0 +1,235 @@
+<html><!-- #BeginTemplate "/Templates/maintemplate.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/pic_avr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:37:47 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" -->
+<title>Begining microcontrollers programming with PIC</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "meta tags" -->
+<meta name="description" content="Το site για το τεμφε - σεμφε τον προγραμματισμό, τα ηλεκτρονικά, την μουσική και το internet από τον Δημήτρη Κουζή - Λουκά (The temfe - semfe, programming, electronics, music and internet site by Dimitris Kousis - Loukas)">
+<!-- #EndEditable -->
+<meta name="keywords" content="temfe τεμφε semfe - σεμφε electronics ηλεκτρονικά programming flash c  pascal music drum n bass hardware assembly ασκηση εργαστηριο">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<SCRIPT LANGUAGE="javascript" src="../scripts.js"></script>
+<link rel="stylesheet" href="../mystyles.css" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000" background="../rootfiles/marble.jpg" leftmargin="0" marginwidth="0" marginheight="0" topmargin="25">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="4" height="1"><img src="../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="176" height="1"><img src="../rootfiles/spacer.gif" width="176" height="1" border="0"></td>
+    <td width="313" height="1"><img src="../rootfiles/spacer.gif" width="313" height="1" border="0"></td>
+    <td width="233" height="1"><img src="../rootfiles/spacer.gif" width="233" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="4" height="1"><img src="../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+  </tr>
+  <tr> 
+    <td  height="24" colspan="3"><img src="../rootfiles/templateUp185.gif" width="185" height="24"></td>
+    <td height="24" background="../rootfiles/templateUpMiddle.gif"></td>
+    <td height="24" colspan="3"><img src="../rootfiles/templateUp242.gif" width="242" height="24"></td>
+  </tr>
+  <tr> 
+    <td height="5" background="../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td height="5" background="../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../rootfiles/templateLeft.gif"></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td colspan="3" bgcolor="#FFFFFF"> <!-- #BeginEditable "contains" -->
+	  <SCRIPT language="">
+UpdateTitlebar("<a href=\"electronics/index.htm\" target=\"mainFrame\"><img src=\"bar/electronics.gif\" border=0></a><a href=\"electronics/pic_avr.htm\" target=\"mainFrame\"><img src=\"bar/electronics.gif\" border=0></a>","<font face='Verdana, Arial, Helvetica, sans-serif'>Προγραμματισμός μικροελεγκτών</font>")
+</script>
+      <table width="720" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><table width="100%" border="1" cellpadding="5" cellspacing="0">
+              <tr> 
+                <td>
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td width="9%"><img src="cubefull.gif" width="68" height="68"></td>
+                      <td width="91%" valign="middle"><strong>Begining microcontrollers 
+                        programming with PIC</strong></td>
+                    </tr>
+                  </table></td>
+              </tr>
+            </table>
+            <br> 
+            <table width="100%" border="1" cellpadding="5" cellspacing="0">
+              <tr> 
+                <td><p>If someone wants to start programming microcontrollers, 
+                    PIC family is for sure the best choice. PICs are inexpensive 
+                    and easy to learn, powerful enough for beginner applications 
+                    and they have a lot of integrated peripherals that make them 
+                    even more powerful.</p>
+                  <p>The required software can be freely downloaded by <a href="http://www.microchip.com/" target="_blank">Microchip's 
+                    site</a>. Don't forget to download databooks for your PIC 
+                    microcontroller, probably PIC16F84, from the same place.</p>
+                  <p>Nobody ever was able to program without read, understand 
+                    (and many times copy) some examples. If someone google &quot;Pic 
+                    Projects&quot; many sites will be found. Most of them present 
+                    home made projects with freely available source code. A good 
+                    place to start with is <a href="http://www.rentron.com/pic.htm" target="_blank">rentron's 
+                    site</a>. Of course useful application notes from Microchip's 
+                    site will provide a sufficient background but be careful because 
+                    some of them are rather advanced.</p>
+                  <p>A very nice book (in affordable price) that someone could 
+                    buy and read is the <a href="http://www.amazon.co.uk/exec/obidos/ASIN/B00005UL27/qid=1065290730/202-7047349-1377459" target="_blank">PIC 
+                    Microcontroller Project Book</a>. It describes a lot of projects 
+                    and the connection of a PIC with a lot of peripherals.</p>
+                  <p>Of course every microcontroller needs some hardware programmer 
+                    to download the program to the IC. <a href="http://www.ic-prog.com/" target="_blank">IC-Prog</a> 
+                    and its hardware companions are the best place to start. Easy 
+                    to use, easy to create programmers and of course free. When 
+                    you get more professional I guess you will need a <a href="http://www.microchip.com/1010/pline/tools/picmicro/program/picstart/index.htm">PICSTART 
+                    Plus</a> official programmer from Microchip which is more 
+                    reliable.</p>
+                  <p>In conclusion what someone may need to start programming 
+                    with PIC microcontrollers are the following:</p>
+                  <ul>
+                    <li> Download MPLAB IDE (www.microchip.com) </li>
+                    <li>Create mini programmer (www.ic-prog.com) </li>
+                    <li>Study examples (www.microchip.com, www.rentron.com/pic.htm, 
+                      www.google.com) </li>
+                    <li>Debug and gain experience</li>
+                  </ul>
+                  <p>Good luck!</p></td>
+              </tr>
+            </table>
+            <br> 
+            <table width="100%" border="1" cellpadding="5" cellspacing="0">
+              <tr> 
+                <td><p><strong>Upgrading from PIC to AVR</strong></p>
+                  <p>The war between PIC or AVR is not over! Nobody can easily 
+                    tell which is better. According to my opinion, AVRs are much 
+                    more powerful because of their C-optimized instruction set 
+                    and the one - cycle per instruction architecture. Their drawback 
+                    in comparison with PIC is that that have more assembly instructions 
+                    to learn and that they are less years in the market. The differences 
+                    between the two families are summarized in the following table.<br>
+                  </p></td>
+              </tr>
+            </table>
+            <br> 
+            <table width="100%" border="1" cellpadding="5" cellspacing="0">
+              <tr> 
+                <td width="50%"><strong>PIC</strong></td>
+                <td width="50%"><strong>AVR</strong></td>
+              </tr>
+              <tr> 
+                <td width="50%">One instruction per 4 clock cycles (4Mhz = 1MIPS)</td>
+                <td width="50%">One instruction per clock cycle (4Mhz = 4MIPS)</td>
+              </tr>
+              <tr> 
+                <td width="50%">Wide voltage range and reliable operation in conditions 
+                  that exceed specifications</td>
+                <td width="50%">Work only under condition that conform to the 
+                  specifications</td>
+              </tr>
+              <tr> 
+                <td>Most parts require an external clock source (e.g. crustal)</td>
+                <td>Most parts are able to work by using AVR's internal clock 
+                  sources.</td>
+              </tr>
+              <tr> 
+                <td width="50%">More years in the market</td>
+                <td width="50%">About two years less in the market</td>
+              </tr>
+              <tr> 
+                <td width="50%">Easy to lern instruction set (only 33 asm instructions)</td>
+                <td width="50%">More instructions (110 asm instructions)</td>
+              </tr>
+              <tr> 
+                <td width="50%">More than one operations to achieve simple tasks</td>
+                <td width="50%">Everything can be completed with one ore two instructions</td>
+              </tr>
+              <tr> 
+                <td width="50%">Difficult indirect memory access and computed 
+                  gotos</td>
+                <td width="50%">Very easy indirect memory access and computed 
+                  gotos with pointer registers and special instructions</td>
+              </tr>
+              <tr> 
+                <td>Difficult to use Memory and Program memory paging</td>
+                <td>Easy to use memory model</td>
+              </tr>
+              <tr> 
+                <td width="50%">Development enviroment: MPLAB IDE</td>
+                <td width="50%">Development enviroment: AVR Studio</td>
+              </tr>
+              <tr> 
+                <td width="50%">Device specific assembly difficult to compile 
+                  C code to</td>
+                <td width="50%">Assembly optimized for use with C compilers and 
+                  similar to other mCs</td>
+              </tr>
+              <tr> 
+                <td width="50%">Many support devices, Simulators - Programmers 
+                  integrated with IDE</td>
+                <td width="50%">STK 500 all in one. Complete integrated into the 
+                  IDE</td>
+              </tr>
+              <tr> 
+                <td width="50%"><strong>Easy to learn, introductory, perfect for 
+                  educational use</strong></td>
+                <td width="50%"><strong>High performance, more powerful assembly, 
+                  less expensive</strong></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- #EndEditable --></td>
+    <td bgcolor="#FFFFFF"></td>
+    <td background="../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td background="../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td height="25" colspan="3" valign="bottom" background="../rootfiles/templateDown185.gif"> 
+      <table width="100" height="25" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="3" colspan="2"></td>
+        </tr>
+        <tr> 
+          <td width="10"></td>
+          <td valign="middle"><a href="../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"><img src="../rootfiles/ihome.gif" width="13" height="13" border="0" alt="Home"></a>&nbsp;<a href="index.html" onMouseOver="MM_displayStatusMsg('Electronics');return document.MM_returnValue"><img src="../rootfiles/ielect.gif" width="13" height="13" border="0" alt="Electronics"></a><a href="../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"></a>&nbsp;<a href="../programming/index.html" onMouseOver="MM_displayStatusMsg('Programming');return document.MM_returnValue"><img src="../rootfiles/iprog.gif" width="13" height="13" border="0" alt="Programming"></a>&nbsp;<a href="../mydocuments/index.html" onMouseOver="MM_displayStatusMsg('My documents');return document.MM_returnValue"><img src="../rootfiles/imydoc.gif" width="13" height="13" border="0" alt="My documents"></a>&nbsp;<a href="../find/index.html" onMouseOver="MM_displayStatusMsg('Find');return document.MM_returnValue"><img src="../rootfiles/ihelp.gif" width="13" height="13" border="0" alt="Find"></a></td>
+        </tr>
+      </table></td>
+    <td height="25" background="../rootfiles/templateDownMiddle.gif"></td>
+    <td height="25" colspan="3"><img src="../rootfiles/templateDown242.gif" width="242" height="25"></td>
+  </tr>
+</table>
+<br>
+<table width="740" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td><font size="1" style="text-align: justify;">Οι κατασκευές, τα προγράμματα 
+        και όλο το περιεχόμενο του site ανήκουν σε εμένα προσωπικά, όσο αυτό δεν 
+        παραβιάζει δικαιώματα άλλων και δημοσιεύονται για ενημερωτικούς σκοπούς. 
+        Καμία εγγύηση δεν παρέχεται για οποιαδήποτε χρήση τους και καμία ευθύνη 
+        δε φέρω για οποιεσδήποτε ζημιές μπορεί να προκαλέσουν. Για επαγγελματική 
+        χρήση ή αναδημοσίευση μέρους ή του συνόλου του περιεχομένου του site, 
+        επικοινωνήστε μαζί μου.</font><br /><br />
+        <center><font size="1">Δημήτρης Κουζής - Λουκάς | (c) 2001-2004 | Dimitris Kouzis 
+          - Loukas</font></center>
+	</td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/pic_avr.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:37:47 GMT -->
+</html>

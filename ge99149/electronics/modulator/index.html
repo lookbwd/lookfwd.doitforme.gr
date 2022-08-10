@@ -1,0 +1,295 @@
+<html><!-- #BeginTemplate "/Templates/maintemplate.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/modulator/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:41:30 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Διαμορφωτής IR</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "meta tags" -->
+<meta name="description" content="Ένας διαμορφωτής υπερύθρων για χρήση σε τηλεχειριστήρια με μικροελεγκτές Infared modulator for remote control and microcontrolers">
+<meta name="keywords" content="διαμορφωτης υπερυθρων τηλεχειριστηριο rc5 orcad pcb 555 πλακετα">
+<!-- #EndEditable -->
+<meta name="keywords" content="temfe τεμφε semfe - σεμφε electronics ηλεκτρονικά programming flash c  pascal music drum n bass hardware assembly ασκηση εργαστηριο">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<SCRIPT LANGUAGE="javascript" src="../../scripts.js"></script>
+<link rel="stylesheet" href="../../mystyles.css" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000" background="../../rootfiles/marble.jpg" leftmargin="0" marginwidth="0" marginheight="0" topmargin="25">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="176" height="1"><img src="../../rootfiles/spacer.gif" width="176" height="1" border="0"></td>
+    <td width="313" height="1"><img src="../../rootfiles/spacer.gif" width="313" height="1" border="0"></td>
+    <td width="233" height="1"><img src="../../rootfiles/spacer.gif" width="233" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+  </tr>
+  <tr> 
+    <td  height="24" colspan="3"><img src="../../rootfiles/templateUp185.gif" width="185" height="24"></td>
+    <td height="24" background="../../rootfiles/templateUpMiddle.gif"></td>
+    <td height="24" colspan="3"><img src="../../rootfiles/templateUp242.gif" width="242" height="24"></td>
+  </tr>
+  <tr> 
+    <td height="5" background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td height="5" background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td colspan="3" bgcolor="#FFFFFF"> <!-- #BeginEditable "contains" --> 
+        <SCRIPT language="">
+UpdateTitlebar("<a href=\"electronics/index.htm\" target=\"mainFrame\"><img src=\"bar/electronics.gif\" border=0></a><a href=\"electronics/modulator/index.htm\" target=\"mainFrame\"><img src=\"bar/modulat.gif\" border=0></a>","<font face='Verdana, Arial, Helvetica, sans-serif'>Διαμορφωτής IR</font>")
+</script>
+        <table width="720" border="0" cellspacing="0" cellpadding="5">
+          <tr> 
+            <td valign="top" height="54" class="Title"> Διαμορφωτής IR</td>
+          </tr>
+          <tr> 
+            <td valign="top" class="My_Text"> 
+              <p>Τα τηλεχειριστήρια βρίσκονται παντού και ελέγχουν από τους συναγερμούς 
+                αυτοκινήτων μέχρι τις ειδικές λειτουργίες του Video. Δεν είναι 
+                λοιπόν απίθανο να θελήσετε κάποτε να ελέγξετε ασύρματα από μία 
+                κατασκευή σας (ή ακόμα και το computer) μία συσκευή που χρησιμοποιεί 
+                τηλεχειριστήριο.</p>
+              <p>Υπάρχουν <a href="http://www.howstuffworks.com/framed.htm?parent=inside-rc.htm&amp;url=http://www.armory.com/%7Espcecdt/remote/remote.html" target="_blank">διαφόρων 
+                ειδών πρωτόκολλα</a> &lt;<a href="fmod_data_formats.pdf">...</a>&gt; 
+                για τα τηλεχειριστήρια και δυστυχώς η κάθε εταιρεία χρησιμοποιεί 
+                το δικό της ή και πολλές φορές περισσότερα από ένα. Παρ'όλα αυτά 
+                η βασική αρχή της μετάδωσης είναι μία:</p>
+              
+            <table border="1" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                  <td><img src="modu.gif" width="504" height="209"></td>
+                </tr>
+                <tr> 
+                  <td class="TableTitle"> Σχ.1 Διαμόρφωση σήματος</td>
+                </tr>
+              </table>
+              <br>
+              Όταν πατηθεί ένα κουμπί στο τηλεχειριστήριο εξάγεται με βάση το 
+              πρωτόκολλο ένα σήμα το οποίο δεν είναι άλλο από τον κωδικό του τηλεχειρηστηρίο 
+              και του κουμπιού που πατήθηκε. Η μορφή αυτού του σήματος είναι δυαδική 
+              δηλαδή 0 και 1 (Σχ.1α). Εκτώς αυτού υπάρχει ένα φέρον σήμα το οποίο 
+              βρίσκεται πάντα στα 30-40kHz (Σχ.1β). Από των πολαπλασιασμό των 
+              δύο παραπάνω προκύπτει το διαμορφωμένο σήμα (Σχ.1γ) το οποίο τελικά 
+              καταλήγει στο Led υπερύθρων. 
+              <p><img src="../images/star.gif" width="15" height="16">Γιατί όλη 
+                αυτή η ιστορία; Το φέρον των 30-40kHz δίνει την δυνατότητα στον 
+                δέκτη να ξεχωρίζει το πραγματικό σήμα από τυχόν άσχετα σήματα 
+                όπως του ηλιακού φωτός, τα παράσιτα των λαμπών πυρακτώσεως κ.α.</p>
+              <p class="SubTitle">Το πρόβλημα</p>
+              <p class="My_Text">Το σήμα του κουμπιού (Σχ.1α) είναι σχετικά χαμηλής 
+                συχνότητας και το παράγει συνήθως κάποιος μικροεπεξεργαστής, έτοιμο 
+                ολοκληρωμένο ή το computer. Παρ'όλα αυτά το φέρον είναι σε μία 
+                αρκετά υψηλότερη συχνότητα. Αυτό είναι πάρα πολύ δύσκολο να κατασκευαστεί 
+                χωρίς να &quot;παγώνει&quot; ο μικροεπεξεργαστής ή το PC κατά 
+                τη διάρκεια της εκπομπής. Πράγματι, ένα σήμα 35kHz έχει περίοδο 
+                28μS το οποίο σημαίνει για το σύστημά μας ότι θα πρέπει να κάνει 
+                interupt κάθε 14μS, μία για το ανοδικό και μία για το καθοδικό 
+                μέτωπο του παλμού.<br>
+                Αυτό για ένα PIC στα 4MHz με 1μS χρόνο εκτέλεσης εντολής σημαίνει 
+                ότι θα πρέπει συνεχώς να βρίσκεται σε κατάσταση interupt ενώ για 
+                ένα AVR στα 8MHz, τα πράγματα είναι ελαφρώς καλύτερα και θα εργάζεται 
+                απλά στην μισή ταχύτητα κατα την διάρκεια εκπομπής.<br>
+                Όσο για το PC, τα πράγματα είναι πραγματικά άσχημα. Μόνο το linux 
+                δίνει την δυνατότητα παραγωγής τέτοιων σημάτων και το dos πιό 
+                δύσκολα, ενώ στα windows είναι σχεδόν αδύνατο. Από την άλλη για 
+                να πετύχετε το παραπάνω, θα πρέπει να εργαστείτε σε assembly ή 
+                C και καταχρηστικά σε pascal ενώ σε άλλες γλώσσες απλά το ξεχνάμε.</p>
+              <p class="SubTitle">Η λύση</p>
+              <p>Η μόνη λύση για να αποσυμφορίσουμε το software από την παραγωγή 
+                του φέροντος (ούτως ή άλλως από την αρχή δεν φαινόταν να είναι 
+
+                δουλειά του) είναι να χρησημοποιήσουμε ένα απλό κυκλωματάκι. Στην 
+                ουσία το αυτό που κάνει το κύκλωμά μας είναι όταν δίνουμε την 
+                κυματομορφή του Σχ.1α να στέλνει υπέρυθρες ακτίνες της μορφής 
+                του Σχ.1γ.<br>
+                Όταν το κατασκεύασα μερικώς με SMD, το μέγεθός του ήταν 2 x 2,5cm 
+                συμπεριλαμβανωμένων δύο LED εκπομπής και μίας μονάδας οδήγησης 
+                (τα οποία από μόνα τους καταλαμβάνουν το 50% του χώρου). Άν χρησιμοποιηθούν 
+                εξ'ολοκλήρου SMD, το κύκλωμα δεν θα ξεπερνάει τα 2cm<sup>2</sup>!<br>
+                Εκτώς αυτού η συχνότητα του φέροντος μπορεί πλέον να ρυθμίζεται 
+                με το χέρι δίνωντας έτσι πολύ καλύτερη ακρίβεια από τις κβαντισμένες 
+                τιμες που προσφέρει το software.<br>
+              </p>
+              <p class="SubTitle">Αναλυτικά</p>
+              <p> Ο διαμορφωτής μας δεν είναι άλλο από μία ακόμα εφαρμογή του 
+                δημοφιλούς 555. Το πιό προτώτυπο ίσως είναι η χρήση του ακροδέκτη 
+                4 (reset) ο οποίος συνήθως οδηγείται στο +. Στην περίπτωσή μας 
+                αυτός ο δέκτης δέχεται το σήμα από το computer ή τον μικροελεγκτή 
+                και εάν η λογική του στάθμη είναι 1 αφήνει τον ταλαντωτή να ταλαντώνει. 
+                Αν είναι 0, οδηγεί το κύκλωμα στην αδράνεια και την έξοδο (3) 
+                σε λογικό 0.<br>
+              </p>
+              
+            <table border="1" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                  <td><img src="schematic.gif" width="392" height="308" border="0"></td>
+                </tr>
+                <tr> 
+                  <td class="TableTitle"> Το κύκλωμα του διαμορφωτή</td>
+                </tr>
+              </table>
+              <p><br>
+                Η συχνότητα ταλάντωσης του U1 δίνεται από τον τύπο <img src="freq.gif" width="114" height="45" align="absmiddle">.<br>
+                Για μία συχνότητα 35kHz η αντίσταση R2 πρέπει να είναι περίπου 
+                3,5kΩ. Επειδή όμως υπάρχουν μεγάλες αποκλίσεις ανάλογα με την 
+                τάση τροφοδοσίας, είναι καλύτερο να χρησημοποιηθεί αντί για σταθερή 
+                αντίσταση ένα μικρό ποντεσιόμετρο.</p>
+              <p>Τέλος το transistor Q1 ενισχύει το σήμα εξόδου (3) του 555 για 
+                να οδηγήσει τα Led υπερύθρων. Δύο Led είναι απαραίτητα μόνο αν 
+                σκοπεύετε να έχετε τον πομπό σε πολύ μεγάλη απόσταση από την συσκευή. 
+                Το μειονέκτημα σε αυτή την περίπτωση είναι η ελαφρώς αυξημένη 
+                κατανάλωση ρεύματος. Αν χρησιμοποιήσετε 2 Led πρέπει να παραλείψετε 
+                την αντίσταση R4.<br>
+              </p>
+       
+              <p class="SubTitle">Πρακτικά</p>
+              <p>Ας έρθουμε λοιπόν και στο πρακτικό μέρος. Tα υλικά που θα χρειαστείτε 
+                είναι τα εξής:</p>
+              
+            <table border="1" cellspacing="0" cellpadding="2" align="center">
+              <tr> 
+                  <td class="TableTitle" colspan="2">Υλικά</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement">R1</td>
+                  <td class="TableElement">1k <font size="1">(**)</font></td>
+                </tr>
+                <tr> 
+                  <td class="TableElement">R3</td>
+                  <td class="TableElement">330Ω <font size="1">(**)</font></td>
+                </tr>
+                <tr> 
+                  <td class="TableElement">R4</td>
+                  <td class="TableElement">39Ω <font size="1">(*) (**)</font></td>
+                </tr>
+                <tr> 
+                  <td class="TableElement">R2</td>
+                  <td class="TableElement">Ποντεσιόμετρο 5k</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement">C1,2</td>
+                  <td class="TableElement">10nF</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement">U1</td>
+                  <td class="TableElement">NE555 <font size="1">(**)</font></td>
+                </tr>
+                <tr> 
+                  <td class="TableElement">Q1</td>
+                  <td class="TableElement">BC547</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement">D1,2</td>
+                  <td class="TableElement">Led υπερύθρων <font size="1">(*)</font></td>
+                </tr>
+                <tr> 
+                  <td class="TableElement">J1</td>
+                  <td class="TableElement">Ακιδοσειρά 3 ακίδων</td>
+                </tr>
+                <tr>
+                  <td class="TableElement" colspan="2"><font size="1">*</font> 
+                    Ή 2 Led ή η R3</td>
+                </tr>
+                <tr> 
+                  <td class="TableElement" colspan="2"><font size="1">**</font> 
+                    Τα R1,3,4 και U3 σε μορφή SMD</td>
+                </tr>
+              </table>
+              <p>Ο μόνος καλός λόγος για να πραγματοποιήσετε την κατασκευή αυτή 
+                με SMD είναι η διαστροφή. Αν παρ'όλα αυτά αποφασίσετε να το κάνετε 
+                η παρακάτω πλακέτα θα σας ικανοποιήσει απόλυτα.</p>
+              
+            <table border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td align="center"><a href="pcb.pdf"><img src="pcb.gif" width="200" height="198" border="0"></a></td>
+                </tr>
+                <tr>
+                  <td class="TableTitle">Η πλακέτα<br>
+                    της κατασκευής</td>
+                </tr>
+                <tr> 
+                  <td align="right"><a href="../index.html#orcad"><img src="../images/powered.gif" width="97" height="35" border="0"></a></td>
+                </tr>
+              </table>
+              <br>
+              Το μέγεθος της είναι 1,7 χ 1,7cm (δηλαδή λίγο μεγαλύτερη από το 
+              νύχι του αντίχειρα!!!) και μπορούσε να γίνει ακόμα μικρότερη. 
+              <p>Η ρύθμιση του ποντεσιομέτρου R2 δεν είναι κρίσιμη. Το μόνο που 
+                επηρεάζει είναι η εμβέλεια εκπομπής. Για την ρύθμισή του, αφότου 
+                έχουμε βεβαιωθεί ότι (από κοντά) το σύστημα λειτουργεί, τοποθετούμε 
+                την συσκευή που θέλουμε να χειριστούμε σε όλο και μεγαλύτερη απόσταση 
+                από το κύκλωμά μας και ρυθμίζουμε την R2 ώστε να πιάνει όσο το 
+                δυνατόν μακρύτερα.<br>
+                <img src="../images/star.gif" width="15" height="16">Για τους 
+                ΣΕΜΦΙΤΕΣ: Η ακολουθία των θέσεων της R2 συγκλίνει σε ένα σημείο 
+                x<sub>0</sub> στο οποίο εμφανίζεται το supremum της εμβέλειας!</p>
+
+
+              Το κύκλωμα αυτό είναι πολύ χρήσιμο κυρίως για όσους ασχολούνται 
+            ερασιτεχνικά με μικροελεγκτές και θέλουν πολύ εύκολα να προσθέσουν 
+            τη δυνατότητα να χειρίζονται συσκευές από απόσταση.</td>
+          </tr>
+          <tr> 
+            <td valign="top" class="My_Text"> 
+              <script language="JavaScript" src="../relative.js">
+</script>
+            </td>
+          </tr>
+        </table>
+  <!-- #EndEditable --></td>
+    <td bgcolor="#FFFFFF"></td>
+    <td background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td height="25" colspan="3" valign="bottom" background="../../rootfiles/templateDown185.gif"> 
+      <table width="100" height="25" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="3" colspan="2"></td>
+        </tr>
+        <tr> 
+          <td width="10"></td>
+          <td valign="middle"><a href="../../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"><img src="../../rootfiles/ihome.gif" width="13" height="13" border="0" alt="Home"></a>&nbsp;<a href="../index.html" onMouseOver="MM_displayStatusMsg('Electronics');return document.MM_returnValue"><img src="../../rootfiles/ielect.gif" width="13" height="13" border="0" alt="Electronics"></a><a href="../../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"></a>&nbsp;<a href="../../programming/index.html" onMouseOver="MM_displayStatusMsg('Programming');return document.MM_returnValue"><img src="../../rootfiles/iprog.gif" width="13" height="13" border="0" alt="Programming"></a>&nbsp;<a href="../../mydocuments/index.html" onMouseOver="MM_displayStatusMsg('My documents');return document.MM_returnValue"><img src="../../rootfiles/imydoc.gif" width="13" height="13" border="0" alt="My documents"></a>&nbsp;<a href="../../find/index.html" onMouseOver="MM_displayStatusMsg('Find');return document.MM_returnValue"><img src="../../rootfiles/ihelp.gif" width="13" height="13" border="0" alt="Find"></a></td>
+        </tr>
+      </table></td>
+    <td height="25" background="../../rootfiles/templateDownMiddle.gif"></td>
+    <td height="25" colspan="3"><img src="../../rootfiles/templateDown242.gif" width="242" height="25"></td>
+  </tr>
+</table>
+<br>
+<table width="740" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td><font size="1" style="text-align: justify;">Οι κατασκευές, τα προγράμματα 
+        και όλο το περιεχόμενο του site ανήκουν σε εμένα προσωπικά, όσο αυτό δεν 
+        παραβιάζει δικαιώματα άλλων και δημοσιεύονται για ενημερωτικούς σκοπούς. 
+        Καμία εγγύηση δεν παρέχεται για οποιαδήποτε χρήση τους και καμία ευθύνη 
+        δε φέρω για οποιεσδήποτε ζημιές μπορεί να προκαλέσουν. Για επαγγελματική 
+        χρήση ή αναδημοσίευση μέρους ή του συνόλου του περιεχομένου του site, 
+        επικοινωνήστε μαζί μου.</font><br /><br />
+        <center><font size="1">Δημήτρης Κουζής - Λουκάς | (c) 2001-2004 | Dimitris Kouzis 
+          - Loukas</font></center>
+	</td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/modulator/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:41:36 GMT -->
+</html>

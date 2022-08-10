@@ -1,0 +1,1 @@
+\JBuilder9\jdk1.4\bin\java -Xmx300m -classpath RandomWalk.jar;jfreechart-0.9.11.jar;jcommon-0.8.6.jar gr.doit4me.randomwalk.RandomWalk

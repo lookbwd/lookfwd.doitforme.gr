@@ -1,0 +1,462 @@
+<html><!-- #BeginTemplate "/Templates/maintemplate.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/programming/c/ctutor.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:44:15 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Pascal - C</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "meta tags" -->
+<meta name="description" content="Το site για το τεμφε τον προγραμματισμό, τα ηλεκτρονικά, την μουσική και το internet από τον Δημήτρη Κουζή - Λουκά (The TEMFE, programming, electronics, music and internet site by Dimitris Kousis - Loukas)">
+<!-- #EndEditable -->
+<meta name="keywords" content="temfe τεμφε semfe - σεμφε electronics ηλεκτρονικά programming flash c  pascal music drum n bass hardware assembly ασκηση εργαστηριο">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<SCRIPT LANGUAGE="javascript" src="../../scripts.js"></script>
+<link rel="stylesheet" href="../../mystyles.css" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000" background="../../rootfiles/marble.jpg" leftmargin="0" marginwidth="0" marginheight="0" topmargin="25">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="176" height="1"><img src="../../rootfiles/spacer.gif" width="176" height="1" border="0"></td>
+    <td width="313" height="1"><img src="../../rootfiles/spacer.gif" width="313" height="1" border="0"></td>
+    <td width="233" height="1"><img src="../../rootfiles/spacer.gif" width="233" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+  </tr>
+  <tr> 
+    <td  height="24" colspan="3"><img src="../../rootfiles/templateUp185.gif" width="185" height="24"></td>
+    <td height="24" background="../../rootfiles/templateUpMiddle.gif"></td>
+    <td height="24" colspan="3"><img src="../../rootfiles/templateUp242.gif" width="242" height="24"></td>
+  </tr>
+  <tr> 
+    <td height="5" background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td height="5" background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td colspan="3" bgcolor="#FFFFFF"> <!-- #BeginEditable "contains" -->
+        
+      <table width="718" border="0" cellspacing="0" cellpadding="5">
+        <tr> 
+            <td class="Title"> 
+
+              <script language="">
+UpdateTitlebar("<a href=\"programming/index.htm\" target=\"mainFrame\"><img src=\"bar/program.gif\" border=\"0\"></a><a href=\"programming/c/index.htm\" target=\"mainFrame\"><img src=\"bar/c.gif\" border=\"0\"></a>","<font face='Verdana, Arial, Helvetica, sans-serif'>C tutorial</font>")
+</script>
+              C tutorial</td>
+          </tr>
+          <tr> 
+            <td class="My_Text"> 
+              <p class="SubTitle">Pascal - C</p>
+              <p>Γενικό Σχόλιο: Η C είναι μία γλώσσα με πολύ περισσότερες δυνατότητες 
+                απ'την Pascal. Αυτό σημαίνει ότι απαιτείται μεγαλύτερη προσοχή.</p>
+              <p>Τη C και άλλες χρήσιμες πληροφορίες μπορείτε να βρείτε στο <a href="http://www.cc.ece.ntua.gr/~balex/">http://www.cc.ece.ntua.gr/~balex/</a></p>
+              <p style='text-align:justify'>Παρατήρηση: Με τη Pascal έγινε μια 
+                προσπάθεια εισαγωγικής προσέγγισης στις γλώσσες προγραμματισμού. 
+                <b>Δεν απαιτείται η γνώση Pascal για τον προγραμματισμό σε C.</b> 
+              </p>
+              <p class="SubTitle">Αντιστοιχίες Pascal - C</p>
+              <p>Το πρώτο πρόγραμμα (που χαιρετάει):<br>
+              </p>
+              
+            <table width="90%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="My_Text"> 
+                    <table border=0 cellspacing=0 cellpadding=0 align="center" class="TableElement" width="100%" height="100%">
+                      <tr> 
+                        <td valign=top> 
+                          <p>Program Pas(input,output);</p>
+                        </td>
+                        <td>&nbsp; </td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp; </td>
+                        <td> 
+                          <p>int main(void)</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>begin;</p>
+                        </td>
+                        <td> 
+                          <p>{</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>write('Hello World!');</p>
+                        </td>
+                        <td> 
+                          <p>printf(&quot;Hello World!&quot;);</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>end.</p>
+                        </td>
+                        <td> 
+                          <p>}</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <p style='text-align:justify'>Ένα λίγο ποιό σύνθετο πρόγραμμα (Χαιρετάει 
+                με το όνομά σου):</p>
+              
+            <table width="90%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="My_Text"> 
+                    <table border=0 cellspacing=0 cellpadding=0 align="center" class="TableElement" height="100%" width="100%">
+                      <tr> 
+                        <td> 
+                          <p>Program Pas(input,output);</p>
+                        </td>
+                        <td>&nbsp; </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>var name : string;</p>
+                        </td>
+                        <td> 
+                          <p>char name[20];</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp; </td>
+                        <td> 
+                          <p>int main(void)</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>begin;</p>
+                        </td>
+                        <td> 
+                          <p>{</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>write('Hello, what is your name? ');</p>
+                        </td>
+                        <td> 
+                          <p>printf(&quot;Hello, what is your name? &quot;);</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>readln(name);</p>
+                        </td>
+                        <td> 
+                          <p>scanf(&quot;%s&quot;,name);</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>write('Hello ',name,' !');</p>
+                        </td>
+                        <td> 
+                          <p>printf(&quot;Hello %s !&quot;,name);</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>end</p>
+                        </td>
+                        <td> 
+                          <p>}</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <p>Ένα πρόγραμμα που... μετράει :<br>
+              </p>
+              
+            <table width="90%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="My_Text"> 
+                    <table border=0 cellspacing=0 cellpadding=0 align="center" class="TableElement">
+                      <tr> 
+                        <td> 
+                          <p>Program Pas(input,output);</p>
+                        </td>
+                        <td>&nbsp; </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>var number,count : integer;</p>
+                        </td>
+                        <td> 
+                          <p>int number,count;</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td>&nbsp; </td>
+                        <td> 
+                          <p>int main(void)</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>begin;</p>
+                        </td>
+                        <td> 
+                          <p>{</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>write('What number do you want to count to? ');</p>
+                        </td>
+                        <td> 
+                          <p>printf(&quot;What number do you want to count to? 
+                             &quot;);</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>readln(number);</p>
+                        </td>
+                        <td> 
+                          <p>scanf(&quot;%d&quot;,&amp;number);</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>for count:=1 to number do</p>
+                        </td>
+                        <td> 
+                          <p>for (count=1; count&lt;=number; count++)</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>writeln(count,' ');</p>
+                        </td>
+                        <td> 
+                          <p>printf(&quot;%d \n&quot;,count);</p>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <p>end.</p>
+                        </td>
+                        <td> 
+                          <p>}</p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+              <p>&nbsp; </p>
+              <p style='text-align:justify'> <img width=107 height=82
+src="image.gif" align=left hspace=12 v:shapes="_x0000_s1033"> Συμπέρασμα: Υπάρχουν 
+                πάρα πολλές ομοιότητες ανάμεσα στη C και την Pascal. Η C είναι 
+                λίγο πιό λιτή αλλά και πιό ιδιόρυθμη.<br>
+
+                π.χ. Αν παραληφθεί το '&amp;' πρίν το number στην εντολή scanf...<br>
+              </p>
+              <p align=center style='text-align:center'>&nbsp;</p>
+              <p align=center style='text-align:center' class="SubTitle">Ασκήσεις</p>
+              <p>Με βάση τα παραπάνω μπορούν να υλοποιηθούν τα εξής :</p>
+              <ul>
+                <li> Ένα πρόγραμμα που τυπώνει τις ημέρες της εβδομάδας (με απλή 
+                  χρήση της printf).</li>
+                <li>Ένα πρόγραμμα που ρωτάει και υποστηρίζει την ομάδα σου.</li>
+                <li>Ένα πρόγραμμα που διαφωνεί με ότι κι αν γράφεις, π.χ.:<br>
+                  &gt;&gt; 8elw_na_fygw<br>
+                  &gt;&gt; Oxi, den 8elw_na_fygw</li>
+                <li>Ένα πρόγραμμα που μετρά ανάποδα από κάποιο αριθμό.</li>
+                <li>Ένα πρόγραμμα που να γράφει ένα ν*ν μοναδιαίος πίνακα: (Χρησιμοποιήστε 
+                  την εντολή if (x==y) printf(&quot;1&quot;); else printf(&quot;0&quot;); 
+                  )</li>
+                <li>Ένα πρόγραμμα που λέει χίλια ευχαριστώ!</li>
+              </ul>
+              <p>&nbsp;</p>
+              <p class="SubTitle">Λύσεις</p>
+              
+            <table width="90%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="My_Text"> 
+                    <p class="TableTitle">Ένα πρόγραμμα που τυπώνει τις ημέρες 
+                      της εβδομάδας</p>
+                    <p>main()<br>
+                      {<br>
+                      printf(&quot;Monday Tuesday Wednesday \nThursday\n Friday 
+                      Saturday Sunday&quot;);<br>
+                      }</p>
+                  </td>
+                </tr>
+              </table>
+              <p>&nbsp;</p>
+              
+            <table width="90%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="My_Text"> 
+                    <p class="TableTitle">Ένα πρόγραμμα που ρωτάει και υποστηρίζει 
+                      την ομάδα σου</p>
+                    <p>char omada[20];<br>
+                      int main(void)<br>
+                      {<br>
+                      printf(&quot;Geia sou, Ti omada eisai ? &quot;);<br>
+                      scanf(&quot;%s&quot;,omada);<br>
+                      printf(&quot;Zhtw o %s ! \nOmadara !!&quot;,omada);<br>
+                      }</p>
+                  </td>
+                </tr>
+              </table>
+              <p><br>
+              </p>
+              
+            <table width="90%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="My_Text"> 
+                    <p class="TableTitle">Ένα πρόγραμμα που διαφωνεί με ότι κι 
+                      αν γράφεις</p>
+                    <p>char frasi[30];<br>
+                      int main(void)<br>
+                      {<br>
+                      printf(&quot;&gt;&gt; &quot;);<br>
+                      scanf(&quot;%s&quot;,frasi);<br>
+                      printf(&quot;&gt;&gt; Oxi,den %s .&quot;,frasi);<br>
+                      }</p>
+                  </td>
+                </tr>
+              </table>
+              <p><br>
+              </p>
+              
+            <table width="90%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="My_Text"> 
+                    <p class="TableTitle">Ένα πρόγραμμα που μετρά ανάποδα από 
+                      κάποιο αριθμό</p>
+                    <p>int number,count;<br>
+                      int main(void)<br>
+                      {<br>
+                      printf(&quot;What number do you want to down count from? 
+                      &quot;);<br>
+                      scanf(&quot;%d&quot;,&amp;number);<br>
+                      for (count=0; count&lt;=number; count++)<br>
+                      printf(&quot;%d \n&quot;,number-count);<br>
+                      }<br>
+                      <br>
+                      ή<br>
+                      <br>
+                      int number,count;<br>
+                      int main(void)<br>
+                      {<br>
+                      printf(&quot;What number do you want to down count from? 
+                      &quot;);<br>
+                      scanf(&quot;%d&quot;,&amp;number);<br>
+                      for (count=number; count&gt;=0 ; count--)<br>
+                      printf(&quot;%d \n&quot;,count);<br>
+                      }</p>
+                  </td>
+                </tr>
+              </table>
+              <p><br>
+              </p>
+              
+            <table width="90%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="My_Text"> 
+                    <p class="TableTitle">Ένα πρόγραμμα που να γράφει ένα ν*ν 
+                      μοναδιαίο πίνακα</p>
+                    <p>int x,y,n;<br>
+                      int main(void)<br>
+                      {<br>
+                      printf(&quot;Ti mege8os na exei o pinakas ? &quot;);<br>
+                      scanf(&quot;%d&quot;,&amp;n);<br>
+                      for (y=1; y&lt;=n ; y++)<br>
+                      {<br>
+                      for (x=1; x&lt;=n ; x++) if (x==y) printf(&quot;1&quot;); 
+                      else printf(&quot;0&quot;);<br>
+                      printf(&quot;\n&quot;);<br>
+                      }</p>
+                  </td>
+
+                </tr>
+              </table>
+              <p><br>
+                <br>
+              </p>
+              
+            <table width="90%" border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                  <td class="My_Text"> 
+                    <p class="TableTitle">Ένα πρόγραμμα που λέει χίλια ευχαριστώ</p>
+                    <p>int number,count;<br>
+                      int main(void)<br>
+                      {<br>
+                      for (count=1; count&lt;=1000; count++) printf(&quot;%d Euxaristw!\n&quot;,count);<br>
+                      }</p>
+                  </td>
+                </tr>
+              </table>
+              
+            </td>
+          </tr>
+        </table>
+        <!-- #EndEditable --></td>
+    <td bgcolor="#FFFFFF"></td>
+    <td background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td height="25" colspan="3" valign="bottom" background="../../rootfiles/templateDown185.gif"> 
+      <table width="100" height="25" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="3" colspan="2"></td>
+        </tr>
+        <tr> 
+          <td width="10"></td>
+          <td valign="middle"><a href="../../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"><img src="../../rootfiles/ihome.gif" width="13" height="13" border="0" alt="Home"></a>&nbsp;<a href="../../electronics/index.html" onMouseOver="MM_displayStatusMsg('Electronics');return document.MM_returnValue"><img src="../../rootfiles/ielect.gif" width="13" height="13" border="0" alt="Electronics"></a><a href="../../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"></a>&nbsp;<a href="../index.html" onMouseOver="MM_displayStatusMsg('Programming');return document.MM_returnValue"><img src="../../rootfiles/iprog.gif" width="13" height="13" border="0" alt="Programming"></a>&nbsp;<a href="../../mydocuments/index.html" onMouseOver="MM_displayStatusMsg('My documents');return document.MM_returnValue"><img src="../../rootfiles/imydoc.gif" width="13" height="13" border="0" alt="My documents"></a>&nbsp;<a href="../../find/index.html" onMouseOver="MM_displayStatusMsg('Find');return document.MM_returnValue"><img src="../../rootfiles/ihelp.gif" width="13" height="13" border="0" alt="Find"></a></td>
+        </tr>
+      </table></td>
+    <td height="25" background="../../rootfiles/templateDownMiddle.gif"></td>
+    <td height="25" colspan="3"><img src="../../rootfiles/templateDown242.gif" width="242" height="25"></td>
+  </tr>
+</table>
+<br>
+<table width="740" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td><font size="1" style="text-align: justify;">Οι κατασκευές, τα προγράμματα 
+        και όλο το περιεχόμενο του site ανήκουν σε εμένα προσωπικά, όσο αυτό δεν 
+        παραβιάζει δικαιώματα άλλων και δημοσιεύονται για ενημερωτικούς σκοπούς. 
+        Καμία εγγύηση δεν παρέχεται για οποιαδήποτε χρήση τους και καμία ευθύνη 
+        δε φέρω για οποιεσδήποτε ζημιές μπορεί να προκαλέσουν. Για επαγγελματική 
+        χρήση ή αναδημοσίευση μέρους ή του συνόλου του περιεχομένου του site, 
+        επικοινωνήστε μαζί μου.</font><br /><br />
+        <center><font size="1">Δημήτρης Κουζής - Λουκάς | (c) 2001-2004 | Dimitris Kouzis 
+          - Loukas</font></center>
+	</td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/programming/c/ctutor.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:44:16 GMT -->
+</html>

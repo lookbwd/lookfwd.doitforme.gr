@@ -1,0 +1,104 @@
+REM *************DICHOTOMY******************
+REM ****************************************
+        DIM a(50), b(50), M(50)
+        DECLARE FUNCTION F! (x!)
+        COMMON SHARED FUNNO
+REM ****************************************
+CLS
+
+PRINT "FUNCTION x ^ 2 - 5 * x + 6, (1)"
+PRINT "FUNCTION -x ^ 2 + 2 * x ^ 4 - 28, (2)"
+PRINT "FUNCTION 5 * (-x ^ (-6) + x ^ (-12)) -E,(3)"
+PRINT "FUNCTION x ^ .5 * TAN(1.28 * x ^ .5) - (V0 - x) ^ .5, (4)"
+PRINT "FUNCTION (P + a / V ^ 2) * (v - b) - R * T, (5)"
+INPUT FUNNO
+1666 REM
+
+INPUT "LEFT POINT="; A0
+INPUT "RIGHT POINT="; B0
+
+IF F(A0) * F(B0) > 0 THEN
+        PRINT "******************************************"
+        PRINT "NO SOLUTION TO THIS REGION"
+        PRINT "******************************************"
+ELSE
+
+INPUT "="; E
+
+K = 1
+a(1) = A0
+b(1) = B0
+FLAG = 0
+
+DO
+
+IF ABS(F(a(K))) < E THEN
+        ROOT = a(K)
+        FLAG = 1
+ELSEIF ABS(F(b(K))) < E THEN
+        ROOT = b(K)
+        FLAG = 1
+ELSE
+        IF ABS(a(K) - b(K)) < E THEN
+                ROOT = (a(K) + b(K)) / 2
+                FLAG = 1
+        ELSE
+                M(K) = (a(K) + b(K)) / 2
+                K = K + 1
+                IF F(M(K - 1)) * F(a(K - 1)) < 0 THEN
+                        a(K) = a(K - 1)
+                        b(K) = M(K - 1)
+                ELSE
+                        a(K) = M(K - 1)
+                        b(K) = b(K - 1)
+                END IF
+        END IF
+END IF
+LOOP WHILE FLAG = 0
+
+CLS
+        PRINT "**************************************"
+        IF FUNNO = 1 THEN
+        PRINT "FUNCTION x ^ 2 - 5 * x + 6"
+        ELSEIF FUNNO = 2 THEN
+        PRINT "FUNCTION -x ^ 2 + 2 * x ^ 4 - 28"
+        ELSEIF FUNNO = 3 THEN
+        PRINT "FUNCTION 5 * (-x ^ (-6) + x ^ (-12)) -E"
+        ELSEIF FUNNO = 4 THEN
+        PRINT "FUNCTION x ^ .5 * TAN(1.28 * x ^ .5) - (V0 - x) ^ .5"
+        ELSEIF FUNNO = 5 THEN
+        PRINT "FUNCTION (P + a / V ^ 2) * (v - b) - R * T"
+        ELSE
+        END IF
+        PRINT "**************************************"
+        PRINT "INTERVAL:"; A0; " , "; B0
+        PRINT "ROOT="; ROOT
+        PRINT "ITERATIONS="; K - 1
+                FOR i = 1 TO K
+                PRINT a(i), b(i)
+                NEXT i
+        PRINT "**************************************"
+
+END IF
+
+INPUT "   ; 1=NAI , 2=OXI"; CH
+IF CH = 1 THEN GOTO 1666
+
+5000    END
+
+FUNCTION F (x) STATIC
+        IF FUNNO = 1 THEN
+        F = x ^ 2 - 5 * x + 6
+        ELSEIF FUNNO = 2 THEN
+        F = -x ^ 2 + 2 * x ^ 4 - 28
+        ELSEIF FUNNO = 3 THEN
+        F = 5 * (-x ^ (-6) + x ^ (-12)) - E
+        ELSEIF FUNNO = 4 THEN
+        F = x ^ .5 * TAN(1.28 * x ^ .5) - (V0 - x) ^ .5
+        ELSEIF FUNNO = 5 THEN
+        F = (P + a / v ^ 2) * (v - b) - R * T
+        ELSE
+        END IF
+
+END FUNCTION
+

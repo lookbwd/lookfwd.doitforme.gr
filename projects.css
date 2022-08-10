@@ -1,0 +1,57 @@
+.group {
+	border-bottom: 1px solid #000000;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-size: 12px; 
+}
+.grouptitle {
+	font-weight: bold; 
+}
+.groupdescription {
+	font-size: smaller; 
+	font-style: italic;
+}
+.normalText {
+	font-size: 10px;
+}
+.strictForm {
+	margin: 0px;
+}
+.adminButtons {
+	font-size: 9px;
+	font-weight: normal;
+	height: 20px;
+	width: 50px;
+}
+.adminField {
+	width: 308px;
+}
+.adminLittleField {
+	width: 150px;
+}
+.virtualButton {
+	text-decoration: underline;
+	cursor: hand;
+}
+.trVisible {
+}
+.trHidden {
+	display: none;
+}
+.strictTable {
+	padding: 0px;
+}
+.handsOn {
+	cursor: hand;
+}.successComplete {
+	font-weight: bold;
+	color: #FF0000;
+	font-size: 12px;
+	font-style: italic;
+	padding: 3px;
+	border: 1px dashed #FF0000;
+	margin: 3px;
+	background-color: #FFFFFF;
+
+
+}

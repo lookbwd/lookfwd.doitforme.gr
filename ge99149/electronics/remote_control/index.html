@@ -1,0 +1,260 @@
+<html><!-- #BeginTemplate "/Templates/maintemplate.dwt" --><!-- DW6 -->
+
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/remote_control/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:37:27 GMT -->
+<head>
+<!-- #BeginEditable "doctitle" --> 
+<title>Τηλεχειρισμός δωματίου</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "meta tags" -->
+<meta name="description" content="Ένας διαμορφωτής υπερύθρων για χρήση σε τηλεχειριστήρια με μικροελεγκτές Infared modulator for remote control and microcontrolers">
+<meta name="keywords" content="διαμορφωτης υπερυθρων τηλεχειριστηριο rc5 orcad pcb 555 πλακετα">
+<!-- #EndEditable -->
+<meta name="keywords" content="temfe τεμφε semfe - σεμφε electronics ηλεκτρονικά programming flash c  pascal music drum n bass hardware assembly ασκηση εργαστηριο">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-7">
+<SCRIPT LANGUAGE="javascript" src="../../scripts.js"></script>
+<link rel="stylesheet" href="../../mystyles.css" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_displayStatusMsg(msgStr) { //v1.0
+  status=msgStr;
+  document.MM_returnValue = true;
+}
+//-->
+</script>
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000" background="../../rootfiles/marble.jpg" leftmargin="0" marginwidth="0" marginheight="0" topmargin="25">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="176" height="1"><img src="../../rootfiles/spacer.gif" width="176" height="1" border="0"></td>
+    <td width="313" height="1"><img src="../../rootfiles/spacer.gif" width="313" height="1" border="0"></td>
+    <td width="233" height="1"><img src="../../rootfiles/spacer.gif" width="233" height="1" border="0"></td>
+    <td width="5" height="1"><img src="../../rootfiles/spacer.gif" width="5" height="1" border="0"></td>
+    <td width="4" height="1"><img src="../../rootfiles/spacer.gif" width="4" height="1" border="0"></td>
+  </tr>
+  <tr> 
+    <td  height="24" colspan="3"><img src="../../rootfiles/templateUp185.gif" width="185" height="24"></td>
+    <td height="24" background="../../rootfiles/templateUpMiddle.gif"></td>
+    <td height="24" colspan="3"><img src="../../rootfiles/templateUp242.gif" width="242" height="24"></td>
+  </tr>
+  <tr> 
+    <td height="5" background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td height="5" background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td bgcolor="#FFFFFF"> </td>
+    <td colspan="3" bgcolor="#FFFFFF"> <!-- #BeginEditable "contains" --> 
+        
+      <SCRIPT language="">
+UpdateTitlebar("<a href=\"electronics/index.htm\" target=\"mainFrame\"><img src=\"bar/electronics.gif\" border=0></a><a href=\"electronics/remote_control/index.htm\" target=\"mainFrame\"><img src=\"bar/remote.gif\" border=0></a>","<font face='Verdana, Arial, Helvetica, sans-serif'>Τηλεχειρισμός δωματίου</font>")
+</script>
+        <table width="720" border="0" cellspacing="0" cellpadding="5">
+          <tr> 
+            
+          <td valign="top" height="54" class="Title"> Τηλεχειρισμός δωματίου</td>
+          </tr>
+          
+        <tr> 
+          <td valign="top"> 
+            <p class="SubTitle">Εισαγωγή</p>
+            <ol>
+              <li>Το computer</li>
+              <li>Το φως του δωματίου</li>
+              <li>Το πορτατίφ</li>
+              <li>Ο ανεμιστήρας</li>
+              <li>Το εκνευριστικό ασύρματο τηλέφωνο</li>
+            </ol>
+            <p>Ο καθένας μπορεί να συμπληρώσει τη δικιά του λίστα από τις συσκευές 
+              που μπορεί να ελέγξει από το κρεβάτι του με ένα απλό τηλεχειριστήριο.</p>
+            <p>Αυτή η κατασκευή δίνει λύση στην απαράδεκτα εκνευριστική κατάσταση 
+              του να πρέπει να σηκωθείς μέσα στη νύχτα για να κλείσεις ένα διακόπτη 
+              ή μία συσκευή που είναι στην άλλη άκρη του δωματίου.</p>
+            <p class="SubTitle">Περιγραφή κατασκευής</p>
+            <p> Το κύκλωμα είναι εξαιρετικά απλό. Πάνω αριστερά βλέπουμε ένα τυπικό 
+              τροφοδοτικό βασισμένο στο 7805. Στο κέντρο βλέπουμε τον μικροεπεξεργαστή 
+              PIC16F84, ένα από τα μικρότερα μέλη της οικογένειας των PIC. Μόνο 
+              λίγες ακίδες από αυτόν χρησιμοποιούνται πραγματικά και έτσι μένουν 
+              αρκετές ελεύθερες για επεκτάσεις του κυκλώματος οι οποίες γίνονται 
+              διαθέσιμες μέσω της ακίδοσειράς J7. Το ολοκληρωμένο U2, ένα TSOP1736 
+              λαμβάνει το σήμα από το τηλεχειριστήριο, το αποδιαμορφώνει και το 
+              οδηγεί στο ποδαράκι 6 του PIC. Ο τελευταίος αποκωδικοποιεί το σήμα, 
+              ελέγχει αν ο κωδικός αντιστοιχεί σε κάποιο ρελέ και αν ναι αναλαμβάνει 
+              να αλλάξει την κατάσταση εξόδου του. Τα ρελέ οδηγούνται με την βοήθεια 
+              του ολοκληρωμένου U4, ένα <a href="http://www.st.com/stonline/books/pdf/docs/5279.pdf" target="_blank">ULN2003</a>. 
+              Αυτό είναι μία συστοιχία από τρανζίστορ τύπου darlington και αναλαμβάνει 
+              να ενισχύσει το ρεύμα εξόδων του PIC σε τέτοιο βαθμό ώστε να οδηγούν 
+              με ασφάλεια τα ρελέ. Το Led D2 λειτουργεί ως ένδειξη τροφοδοσίας 
+              και επιπλέον ως ένδειξη λήψης σήματος από το τηλεχειριστήριο. Με 
+              αυτό τον τρόπο μπορείτε να ελέγχετε αν έχει το τηλεχειριστήριο μπαταρίες. 
+              Τα led-άκια D3-D7 συνδέονται παράλληλα με τα ρελέ εξόδου και δείχνουν 
+              αν το αντίστοιχο ρελέ είναι ενεργοποιημένο ή απενεργοποιημένο. </p>
+            <table border="1" cellspacing="0" cellpadding="0" align="center">
+              <tr> 
+                <td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0" width="550" height="436">
+                    <param name=movie value="scrollpcb_remote.swf">
+                    <param name=quality value=high>
+                    <embed src="scrollpcb_remote.swf" quality=high pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="550" height="436"> 
+                    </embed> </object></td>
+              </tr>
+              <tr> 
+                <td class="TableTitle"> Το κύκλωμα του διαμορφωτή (<a href="schematic.pdf">.pdf</a>)</td>
+              </tr>
+            </table>
+            <p class="SubTitle">Πρακτικά</p>
+            <p>Ας έρθουμε λοιπόν και στο πρακτικό μέρος. Tα υλικά που θα χρειαστείτε 
+              είναι τα εξής:</p>
+            <table border="1" cellspacing="0" cellpadding="2" align="center">
+              <tr> 
+                <td class="TableTitle" colspan="2">Υλικά</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">R1</td>
+                <td class="TableElement">56</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">R2-R7</td>
+                <td class="TableElement">220</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">C1</td>
+                <td class="TableElement">2200uF 16V</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">C2</td>
+                <td class="TableElement">47uF 16V</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">C3</td>
+                <td class="TableElement">100nF</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">C4</td>
+                <td class="TableElement">47uF</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">D1</td>
+                <td class="TableElement">Γέφυρα ανόρθωσης 1A</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">D2</td>
+                <td class="TableElement">Μπλε LED</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">D3-D7</td>
+                <td class="TableElement">LED κόκκινο 5mm</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">Q1</td>
+                <td class="TableElement">Κρύσταλλος 4Mhz</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">K1-K5</td>
+                <td class="TableElement">Ρελέ για τυπωμένο</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">U1</td>
+                <td class="TableElement">7805</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">U2</td>
+                <td class="TableElement">TSOP1736</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">U3</td>
+                <td class="TableElement">ULN2003</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">J1-J6</td>
+                <td class="TableElement">Κλέμες για τυπωμένο</td>
+              </tr>
+              <tr> 
+                <td class="TableElement">J7</td>
+                <td class="TableElement">Ακιδοσειρά 8 ακίδων</td>
+              </tr>
+              <tr> 
+                <td colspan="2" class="TableElement">Μετασχηματιστής 220/9V (Συνδέεται 
+                  στο K1)</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="TableElement">Κουτί και καλώδια σύνδεσης 
+                  με το ρεύμα</td>
+              </tr>
+            </table>
+            <p>Η κατασκευή μπορεί να κατασκευαστεί στο τυπωμένο κύκλωμα που φαίνεται 
+              παρακάτω. Αν θέλετε να οδηγήσετε μεγάλα φορτία από κάποιο ρελέ πιθανώς 
+              να χρειαστεί να ενισχύσετε κάποια από τις γραμμές εξόδου, κολλώντας 
+              ένα χάλκινο καλώδιο από πάνω της. Η κατασκευή είναι σχετικά εύκολη 
+              και αναμένεται να λειτουργήσει αμέσως μόλις την τροφοδοτήσετε.</p>
+            <table border="1" cellspacing="0" cellpadding="5" align="center">
+              <tr> 
+                <td align="center"><a href="pcb.pdf"><img src="pcb.gif" width="428" height="286" border="0"></a></td>
+              </tr>
+              <tr> 
+                <td class="TableTitle">Η πλακέτα της κατασκευής και η τοποθέτηση 
+                  των υλικών (<a href="place.pdf">.pdf</a>)</td>
+              </tr>
+              <tr> 
+                <td align="right"><a href="../index.html#orcad"><img src="../images/powered.gif" width="97" height="35" border="0"></a></td>
+              </tr>
+            </table>
+            <p class="SubTitle">Φωτογραφίες</p>
+            <p><img src="front_rear.jpg" width="334" height="203"></p>
+            <p>Η μπροστά και η πίσω όψη του δέκτη και το τηλεχειριστήριο.</p>
+            <p><img src="open_view.jpg" width="328" height="294"></p>
+            <p>Εικόνα από μέσα!</p></td>
+          </tr>
+          <tr> 
+            <td valign="top" class="My_Text"> 
+              <script language="JavaScript" src="../relative.js">
+</script>
+            </td>
+          </tr>
+        </table>
+  <!-- #EndEditable --></td>
+    <td bgcolor="#FFFFFF"></td>
+    <td background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td background="../../rootfiles/templateLeft.gif"></td>
+    <td height="5" colspan="5" bgcolor="#FFFFFF"></td>
+    <td background="../../rootfiles/templateRight.gif"></td>
+  </tr>
+  <tr> 
+    <td height="25" colspan="3" valign="bottom" background="../../rootfiles/templateDown185.gif"> 
+      <table width="100" height="25" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td height="3" colspan="2"></td>
+        </tr>
+        <tr> 
+          <td width="10"></td>
+          <td valign="middle"><a href="../../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"><img src="../../rootfiles/ihome.gif" width="13" height="13" border="0" alt="Home"></a>&nbsp;<a href="../index.html" onMouseOver="MM_displayStatusMsg('Electronics');return document.MM_returnValue"><img src="../../rootfiles/ielect.gif" width="13" height="13" border="0" alt="Electronics"></a><a href="../../index-2.html" target="_parent" onMouseOver="MM_displayStatusMsg('Home');return document.MM_returnValue"></a>&nbsp;<a href="../../programming/index.html" onMouseOver="MM_displayStatusMsg('Programming');return document.MM_returnValue"><img src="../../rootfiles/iprog.gif" width="13" height="13" border="0" alt="Programming"></a>&nbsp;<a href="../../mydocuments/index.html" onMouseOver="MM_displayStatusMsg('My documents');return document.MM_returnValue"><img src="../../rootfiles/imydoc.gif" width="13" height="13" border="0" alt="My documents"></a>&nbsp;<a href="../../find/index.html" onMouseOver="MM_displayStatusMsg('Find');return document.MM_returnValue"><img src="../../rootfiles/ihelp.gif" width="13" height="13" border="0" alt="Find"></a></td>
+        </tr>
+      </table></td>
+    <td height="25" background="../../rootfiles/templateDownMiddle.gif"></td>
+    <td height="25" colspan="3"><img src="../../rootfiles/templateDown242.gif" width="242" height="25"></td>
+  </tr>
+</table>
+<br>
+<table width="740" border="0" align="center" cellpadding="5" cellspacing="0">
+  <tr>
+    <td><font size="1" style="text-align: justify;">Οι κατασκευές, τα προγράμματα 
+        και όλο το περιεχόμενο του site ανήκουν σε εμένα προσωπικά, όσο αυτό δεν 
+        παραβιάζει δικαιώματα άλλων και δημοσιεύονται για ενημερωτικούς σκοπούς. 
+        Καμία εγγύηση δεν παρέχεται για οποιαδήποτε χρήση τους και καμία ευθύνη 
+        δε φέρω για οποιεσδήποτε ζημιές μπορεί να προκαλέσουν. Για επαγγελματική 
+        χρήση ή αναδημοσίευση μέρους ή του συνόλου του περιεχομένου του site, 
+        επικοινωνήστε μαζί μου.</font><br /><br />
+        <center><font size="1">Δημήτρης Κουζής - Λουκάς | (c) 2001-2004 | Dimitris Kouzis 
+          - Loukas</font></center>
+	</td>
+  </tr>
+</table>
+</body>
+<!-- #EndTemplate -->
+<!-- Mirrored from www.lookfwd.doitforme.gr/ge99149/electronics/remote_control/index.htm by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 10 Aug 2022 06:37:36 GMT -->
+</html>

@@ -1,0 +1,31 @@
+Το ΔΚΛZIP είναι εδώ και δουλεύει!!!
+
+Using Kodak Imaging Καλημέρα, τι κάνεις; να σαι πάντα καλά
+
+Kodak Imaging enables you to view, annotate, and perform basic tasks with image documents, including fax documents and scanned images.
+
+ to start Kodak Imaging.
+
+Note 
+You can also start Kodak Imaging by clicking Start, pointing to Programs, pointing to Accessories, and then clicking Imaging.
+Keeping Windows 98 up-to-date
+
+Windows Update is an online extension of Windows 98 that helps your computer work and run better. Windows Update provides a central location to find product enhancements and specific files customized for your computer. Product enhancements include service
+
+Windows Update indicates the approximate download time and whether an update is already installed on your computer. You can select one item or multiple items to install. 
+
+To open Windows Update, click Start, and then click Windows Update.
+
+Note
+
+You can also open Windows Update by clicking Start, pointing to Settings, and then clicking Windows Update. 
+
+Using Paint
+
+You can use Paint to create, edit, and view pictures. You can paste a Paint picture into another document you've created, or use it as your desktop background. You can even use Paint to view and edit scanned photos.
+
+ to start Paint.
+
+Notes 
+You can also start Paint by clicking Start, pointing to Programs, pointing to Accessories, and then clicking Paint. 
+For information about how to use Paint, click the Help menu in Paint.
